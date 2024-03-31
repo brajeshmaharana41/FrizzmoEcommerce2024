@@ -1,0 +1,21 @@
+<mat-card class="invite-cards">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+        <div>
+            <button class="invite-btn" mat-mini-fab aria-label="">
+                {{inviteconform.label}}
+            </button>
+        </div>
+        <div class="pl-3">
+            <div>
+                <span class="title">{{inviteconform.title}}</span>
+            </div>
+            <div>
+                <span class="dec_school" matTooltip="{{inviteconform.schoolname}}">{{inviteconform.schoolname}}</span>
+            </div>
+            <div >
+                <span class="sub-title">{{inviteconform.subtitle}}</span>
+            </div>
+        </div>
+    </div>
+
+</mat-card>

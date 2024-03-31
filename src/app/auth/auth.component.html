@@ -1,0 +1,102 @@
+<div class="background">
+    <div style="background: linear-gradient(to left, #69bd65, #22ab72);">
+        <div class="container">
+            <div class="logo">
+                <img src="../../assets/product-details/Group 25999.svg">
+            </div>
+            <div class="signup">
+                <mat-card class="card">
+                    <mat-tab-group mat-align-tabs="center" animationDuration="500ms" dynamicHeight>
+                        <mat-tab label="Sign Up">
+                            <div class="left">
+                                <mat-card-title>Please fill below details to complete sign up.</mat-card-title>
+                            </div>
+                            <form [formGroup]="signUpForm" (ngSubmit)="onClicksignUpSubmit(signUpForm.value)">
+                                <div class="example-container">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>First Name</mat-label>
+                                        <input matInput placeholder="First Name" formControlName="firstName">
+                                        <mat-error *ngIf="SignUpError('firstName', 'required')">You must Enter First Name</mat-error>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Last Name</mat-label>
+                                        <input matInput placeholder="Last Name" formControlName="lastName" >
+                                        <mat-error *ngIf="SignUpError('lastName', 'required')">You must Enter First Name</mat-error>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Password</mat-label>
+                                        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" maxlength="20" formControlName="password">
+                                        <mat-error *ngIf="SignUpError('password', 'required')"> You Must Enter Password</mat-error>
+                                        <mat-error *ngIf="SignUpError('password', 'pattern')">Password should Includes upper lower case with special character and numbers. Be at least 8 characters</mat-error>
+                                        <div style="cursor: pointer;" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                            <mat-icon style="color: #EAEAEA; font-size: medium;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                        </div>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Confirm Password</mat-label>
+                                        <input matInput [type]="conformpasswordhide ? 'password' : 'text'" placeholder="Confirm Password" maxlength="20" formControlName="confirmpassword"  [errorStateMatcher]="confirmErrorMatcher">
+                                        <mat-error>{{ getErrorMessage('confirmpassword') }}</mat-error>
+
+                                        <div style="cursor: pointer;" mat-icon-button matSuffix (click)="conformpasswordhide = !conformpasswordhide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="conformpasswordhide">
+                                            <mat-icon style="color: #EAEAEA; font-size: medium;">{{conformpasswordhide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                        </div>
+                                    </mat-form-field>
+
+                                    <div fxLayout="row" style="margin:18px;">
+                                        <div fxLayoutAlign="center center">
+                                            <mat-checkbox></mat-checkbox>
+                                            <span class=" pb-1 pl-1" style="font-size: 11px; font-family:Montserrat; line-height: 14px; font-weight: 500; color: #000000; overflow-wrap:break-word; margin-left: 10px;">Stay up to date on the latest news, promotions, and more from Frizzmo.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pl-5 pr-5 pt-5 pb-3">
+                                    <div class="pt-3">
+                                        <button mat-button [disabled] = "!signUpForm.valid" routerLink="/signup/school-details" class="auth_btn" type="submit">SIGN UP</button>
+                                    </div>
+                                </div>
+
+                            </form>    
+                            <div class="center">
+                                <span class="term">By clicking sign up you agree with <a href="#" style="color: #00AA75; text-decoration: none; font-weight: 700;">frizzmo Terms & Policy</a></span>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Sign In"> 
+                            <div class="left">
+                                <mat-card-title>Please fill out your account details below to sign in.</mat-card-title>
+                            </div>
+                            <form [formGroup]="signInForm" (ngSubmit)="onClicksignInSubmit(signInForm.value)">
+                                <div class="example-container">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Email</mat-label>
+                                        <input type="email" matInput placeholder="Enter Email" formControlName="signInemail">
+                                        <mat-error *ngIf="SignInError('signInemail', 'required')">Enter Email Address</mat-error>
+                                        <mat-error *ngIf="SignInError('signInemail', 'pattern')">Invalid Email Address</mat-error>
+                                    </mat-form-field>
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Password</mat-label>
+                                        <input matInput [type]="signinpasswordhide ? 'password' : 'text'" placeholder="Password" maxlength="20" formControlName="signInpassword" >
+                                        <mat-error *ngIf="SignInError('signInpassword', 'required')">You must Enter Password</mat-error>
+                                        <mat-error *ngIf="SignInError('signInpassword', 'pattern')">Incorrect Password</mat-error>
+                                        <div style="cursor: pointer;" mat-icon-button matSuffix (click)="signinpasswordhide = !signinpasswordhide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="signinpasswordhide">
+                                            <mat-icon style="color: #EAEAEA; font-size: medium;">{{signinpasswordhide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                        </div>
+                                    </mat-form-field>
+                                    <div class="top">
+                                        <span style="font-size: 13px; font-family: 'Montserrat'; color: #00AA75; cursor: pointer; font-weight: 500;" [routerLink]="['/forgot']" routerLinkActive="router-link-active">Forgot Password?</span>
+                                    </div>
+                                </div>
+                                <div class="pl-5 pr-5" style="padding-top: 15px;">
+                                    <button mat-raised-button [disabled] = "!signInForm.valid" routerLink="/dashboard"  type="submit" class="but">SIGN IN</button>
+                                </div>
+                            </form>    
+                        </mat-tab>
+                    </mat-tab-group> 
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

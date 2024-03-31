@@ -1,0 +1,121 @@
+.head{
+    display: flex;
+    flex-wrap: wrap;
+}
+.title{
+    font-size: large;
+    font-weight: 600;
+    font-family: "Montserrat";
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+.view{
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 15px;
+  padding-top: 20px;
+}
+.trs-card{
+  box-shadow: 0px 0px 1px 0px #b3b3b3;
+}
+.tranbord{
+  border: 1px solid #00aa749f;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #00aa744d;
+  .iconcolor{
+    color: #00AA75;
+  }
+}
+.ordtitle{
+  font-size: 14px;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+
+.orddata{
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #7E84A3;
+}
+.orddata{
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #7E84A3;
+}
+.tanprice{
+  font-size: 14px;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+.tanpricecolor{
+  font-size: 14px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #00AA75;
+}
+@media only screen and (min-width: 416px) and (max-width: 576px){
+  .tranbord{
+    width: 35px;
+    height: 35px;
+    .iconcolor{
+      color: #00AA75;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .ordtitle{
+      font-size: 12px;
+    }
+    .orddata{
+      font-size: 11px;
+    }
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 415px){
+  .tranbord{
+    width: 30px;
+    height: 30px;
+    .iconcolor{
+      color: #00AA75;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+   
+  }
+  .ordtitle{
+    font-size: 11px;
+  }
+  .orddata{
+    font-size: 10px;
+  }
+}
+  @media only screen and (min-width: 50px) and (max-width: 349px){
+    .tranbord{
+      width: 25px;
+      height: 25px;
+      .iconcolor{
+        color: #00AA75;
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+     
+    }
+    .ordtitle{
+      font-size: 11px;
+    }
+    .orddata{
+      font-size: 10px;
+    }
+  }

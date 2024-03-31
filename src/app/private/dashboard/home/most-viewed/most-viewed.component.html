@@ -1,0 +1,14 @@
+<div class="pt-5 pb-5">
+    <div fxLayout="row" class="pl-2">
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                <span class="title">Most Popular Products</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cardsrow row">
+    <div *ngFor="let productView of productViews">
+        <app-product-card [product] = "productView"></app-product-card>
+    </div>
+</div>  

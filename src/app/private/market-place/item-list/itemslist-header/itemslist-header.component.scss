@@ -1,0 +1,107 @@
+.catogory{
+    height: 80PX;
+}
+.chips-btn{
+    font-size: 10px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: white;
+    background-color: #4B4B4B;
+    border-radius: 30px;
+}
+.chips-btn:active{
+    background-color: #4B4B4B;
+  }
+  
+  .chips-btn:focus{
+    background-color: #00AA75;
+  }
+.item-head{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+mat-toolbar{
+    background: #fafafa;
+    border-bottom: 1px solid #EBEBEB;
+}
+.short{
+    border-bottom: 0px;
+}
+.sort{
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 15px;
+}
+mat-button-toggle{
+    font-family: "Montserrat";
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B3B3B3;
+    background-color: #fafafa;
+}
+.title{
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-weight: 600;
+    color: #2C312F;
+}
+.arrow-btn{
+    border: 1px solid #EBEBEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+.arrow-icon{
+    font-size: 14px;
+    color: #D8D8D8;
+}
+.item-filter{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    color: #808080;
+}
+.item-mob-icon{
+    color: #808080;
+}
+.dilog-btn{
+    border: 1px solid #fafafa;
+}
+.dilog-right{
+    border-left: 1px solid #F0F0F0;
+}
+.dilog-left{
+    border-right: 1px solid #F0F0F0;
+
+}
+.filter-mob{
+    display: none;
+}
+.center{
+    display: flex;
+    align-items: center;
+}
+@media only screen and (min-width: 150px) and (max-width: 700px){
+    .short{
+        display: none;
+    }
+    .filter-mob{
+        display: block;
+        border-bottom: 1px solid #F0F0F0;
+        box-shadow: 0px 2px 6px 0px #00000034;
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    .arrow-btn{
+        display: none;
+    }
+}
+
+::ng-deep .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+    color: #00AA75 !important;
+}

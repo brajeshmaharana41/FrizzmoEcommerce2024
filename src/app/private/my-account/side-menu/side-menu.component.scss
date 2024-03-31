@@ -1,0 +1,14 @@
+.list{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: "Montserrat";
+    color: rgb(193,193,193);
+    cursor: pointer;
+}
+.list.active{
+    font-weight: 500;
+    color: #191919;
+}
+.account-list{
+    padding-top: 85px;
+}

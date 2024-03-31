@@ -1,0 +1,66 @@
+<app-main-header></app-main-header>
+    <mat-toolbar style="background-color: #fafafa;">
+        <div class="container">
+            <div>
+                <span>200 results found</span>
+            </div>
+        </div>
+    </mat-toolbar>    
+<div style="background: #fafafa;">
+    <div class="container">
+      <div>
+          <div fxLayout="row wrap">
+              <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="72" fxFlex.lg="72" fxFlex.xl="72">
+                <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx" >
+                    <div fxHide fxShow.gt-sm fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" style="padding: 10px;">
+                      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div>
+                          <span class="title">Sort by: </span>
+                        </div>
+                        <div>
+                          <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="sort">
+                            <mat-button-toggle value="bold">Popular</mat-button-toggle>
+                            <mat-button-toggle value="italic">Price</mat-button-toggle>
+                            <mat-button-toggle value="underline">Reviews</mat-button-toggle>
+                            <mat-button-toggle value="italic">Discount</mat-button-toggle>
+                            <mat-button-toggle value="underline">New Arrivals</mat-button-toggle>
+                          </mat-button-toggle-group>
+                        </div>
+                      </div>
+                    </div>
+                    <mat-toolbar class="filter-mob" fxHide fxShow.lt-md>
+                      <div>
+                          <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="dilog-left">
+                              <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                                  <button mat-button class="dilog-btn" (click)="openshortDialog()">
+                                      <mat-icon class="item-mob-icon">sort</mat-icon>
+                                      <span class="item-filter">Sort</span>
+                                  </button>
+                              </div>
+                          </div>
+                          <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="dilog-right">
+                              <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                                  <button mat-button class="dilog-btn" (click)="opensfilterDialog()">
+                                      <mat-icon class="item-mob-icon">filter_list</mat-icon>
+                                      <span class="item-filter">Filter</span>
+                                  </button>    
+                              </div>
+                          </div>
+                      </div>    
+                  </mat-toolbar>
+                </div>
+
+                <div style="padding: 10px;">
+                  <app-itemslist-products></app-itemslist-products>
+                </div>
+              </div>
+              <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="28" fxFlex.lg="28" fxFlex.xl="28">
+                <div class="filter">
+                  <app-itemslist-filter></app-itemslist-filter>
+                </div>
+              </div>     
+          </div>
+      </div>
+    </div>
+  </div>
+<app-main-footer></app-main-footer>

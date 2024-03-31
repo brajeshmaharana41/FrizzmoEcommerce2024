@@ -1,0 +1,103 @@
+.background {
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    justify-content: center;
+    height: 100vh; 
+    .logo {
+        justify-content: center;
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        img {
+            max-width: 200px;
+        }
+    }
+    .signup {
+        display: flex;
+        justify-content: center;
+        .card {
+            width: 370px;
+            height: 590px;
+            margin-bottom:30px ;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+    }
+}
+
+mat-card-title {
+    font-size: 11px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    margin-top: 5%;
+}
+.example-full-width {
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin-left: 6%;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.left {
+    margin-left: 7%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+input.frizzmo {
+    background: #00aa75;
+    transform: scale(1.3);
+}
+.form-check{
+    margin: 20px;
+    .form-check-input{
+        width: 15px;
+        height: 15px;
+    }
+}
+.top {
+    margin: 7%;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.example-margin{
+    margin-top: 5px;
+}
+.but {
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    border-radius: 30px;
+    width: 100%;
+    height: 50px;
+    color: white;
+    margin-top: 80px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    box-shadow: 0px 0px 2px 0px rgb(184, 184, 184);
+}
+.term{
+    font-size: x-small; 
+    font-family: 'Montserrat'; 
+    font-weight: 500
+}
+@media only screen and (min-width: 50px) and (max-width: 360px){
+    .term{
+        font-size: xx-small; 
+    }
+}
+.auth_btn {
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    border-radius: 30px;
+    width: 100%;
+    height: 50px;
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    color: white;
+    font-weight: 700;
+    font-family: "Montserrat";
+}

@@ -1,0 +1,48 @@
+<mat-card class="book-address">
+    <div class="p-3">
+        <div fxHide fxShow.gt-sm fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="gappx">
+            <div>
+                <span class="book-addrs-font">{{address_details.name}}</span>
+            </div>
+            <div>
+                <span class="book-addrs-font font-color">{{address_details.title}}</span>
+            </div>
+        </div>
+        <div fxHide fxShow.lt-md fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="gappx">
+            <div class="pb-3">
+                <span class="book-addrs-font font-color">{{address_details.title}}</span>
+            </div>
+            <div>
+                <span class="book-addrs-font">{{address_details.name}}</span>
+            </div>
+        </div>
+        <div>
+            <span class="book-addrs-font">{{address_details.address}}</span>
+        </div>
+        <div>
+            <span class="book-addrs-font">{{address_details.house}}</span>
+        </div>
+        <div>
+            <span class="book-addrs-font">{{address_details.city}}</span>
+        </div>
+        <div>
+            <span class="book-addrs-font">{{address_details.state}}</span>
+        </div>
+        <div>
+            <span class="book-addrs-font">{{address_details.pincode}}</span>
+        </div>
+        <div>
+            <span class="book-addrs-font">{{address_details.contry}}</span>
+        </div>
+        <div class="pt-4 ">
+            <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                <div>
+                    <a class="font-edit"  (click)="openDialogs()">Edit</a>
+                </div>
+                <div class="pl-3">
+                    <a class="font-edit" (click)="openDialog()">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

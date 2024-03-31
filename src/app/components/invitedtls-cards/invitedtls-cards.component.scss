@@ -1,0 +1,58 @@
+.invite-cards{
+    height: 100px;
+    box-shadow: 0px 0px 1px 0px #707070;
+}
+.invite-btn{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Montserrat"; 
+    color: white;
+    background-color: #00AA75;
+    box-shadow: 0px 0px 0px 0px;
+}
+.title{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.sub-title{
+    font-size: 11px;
+    font-weight: 600;
+    font-family: "Montserrat"; 
+    color: #7E84A3;
+}
+.refer-btn{
+    border: 1px solid #00AA75;
+    color: #00AA75;
+    background: white;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-family: "Montserrat";
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-left: 7px;
+}
+.refer-btns{
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    color: #ffffff;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-family: "Montserrat";
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    font-weight: 600;
+    border-radius: 30px;
+    margin-left: 7px;
+}
+.dec_school{
+    font-size: 13px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: #7E84A3;
+}

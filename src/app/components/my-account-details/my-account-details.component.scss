@@ -1,0 +1,32 @@
+.account-card{
+    height: 140px;
+    cursor: pointer;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account-btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    background: linear-gradient(to left, #69bd65, #22ab72); 
+    color: white;
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+
+.account-subtitle{
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Montserrat";
+}
+
+.account-title{
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}

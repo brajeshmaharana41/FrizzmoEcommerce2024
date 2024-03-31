@@ -1,0 +1,120 @@
+<div>
+    <div>
+        <div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="gappx">
+            <div class="p-2">
+                <span class="addres-title">Edit School Address</span>
+            </div>
+    
+            <div class="p-2">
+                <mat-icon mat-dialog-close>close</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="bord pt-2">
+    </div>
+    <div>
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+            <div class="pt-3 pl-3">
+                <span class="radio-title">Shipping Address</span>
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="addressDetails" (ngSubmit)="onClickSubmit(addressDetails.value)">
+
+    <div>
+        <div fxLayout="row wrap">
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+                <div class="p-3">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>School Name</mat-label>
+                        <input matInput placeholder="Enter School Name" formControlName="schoolname">
+                        <mat-error *ngIf="myError('schoolname', 'required')">You Must Enter First Name</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div class="p-3">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Address Line 1*</mat-label>
+                        <input matInput placeholder="Enter Address" formControlName="address1">
+                        <mat-error *ngIf="myError('address1', 'required')">You Must Enter Address</mat-error>
+                    </mat-form-field> 
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div class="p-3">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Address Line 2 (Optional)</mat-label>
+                        <input matInput placeholder="Enter Address" >
+                    </mat-form-field> 
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div class="p-3">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Zip / Postal Code</mat-label>
+                        <input matInput placeholder="Enter" formControlName="postalcode" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                        <mat-error *ngIf="myError('postalcode', 'required')">You Must Enter Postal Code/ Zip</mat-error>
+                    </mat-form-field> 
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div class="p-3">
+                    <mat-form-field class="example-full-width" cdkScrollable>
+                        <mat-label><img class="lable-img" src="../../../../assets/product-details/Mask Group 3.png"> <span class="ml-4">Country/ Region*</span></mat-label>
+                        <input  type="text" placeholder="Country"
+                        formControlName="country"
+                        matInput
+                        [matAutocomplete]="auto" appAutocompletePosition="trigger">
+                        <mat-error *ngIf="myError('country', 'required')">You Must Select A Country</mat-error>
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of options" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <button mat-icon-button matSuffix>
+                            <mat-icon  class="serc">arrow_drop_down</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+            </div>
+           
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div class="p-3">
+                    <mat-form-field class="example-full-width" >
+                        <mat-label>City</mat-label>
+                        <input matInput placeholder="Enter City" formControlName="city">
+                        <mat-error *ngIf="myError('city', 'required')">You Must Enter City</mat-error>
+                    </mat-form-field> 
+                </div>
+            </div> 
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                <div class="p-3">
+                    <mat-form-field  class="example-full-width" cdkScrollable>
+                        <mat-label>State/ Province*</mat-label>
+                        <input  type="text" placeholder="States"
+                        formControlName="states"
+                        matInput
+                        [matAutocomplete]="auto" appAutocompletePosition="trigger">
+                        <mat-error *ngIf="myError('states', 'required')">You Must Select A State</mat-error>
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of options" [value]="option">
+                                {{option}}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <button mat-icon-button matSuffix>
+                            <mat-icon  class="serc">arrow_drop_down</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx" class="pt-5">
+        <div class="pt-5">
+            <button mat-button class="address-btn" mat-dialog-close [disabled] = "!addressDetails.valid" type="submit">Update Now</button>
+        </div>
+    </div>
+    </form>
+</div>
+

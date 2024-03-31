@@ -1,0 +1,174 @@
+<app-main-header [i] = index></app-main-header>
+    <div class="background">
+    <div class="container">
+        <app-my-accont-header fxHide fxShow.lt-sm></app-my-accont-header>
+        <div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20" class="account-mob">
+                <div class="account-list">
+                    <mat-list role="list">
+                        <mat-list-item role="listitem" class="listcolor" routerLink="/my-account/orders" routerLinkActive="active">Your Orders</mat-list-item>
+                        <mat-list-item role="listitem" class="list" routerLink="/my-account/address-book" routerLinkActive="active">Address Book</mat-list-item>
+                        <mat-list-item role="listitem" class="list" routerLink="/my-account/account-details" routerLinkActive="active">Account Details</mat-list-item>
+                        <mat-list-item role="listitem" class="list" routerLink="/my-account/savedcard" routerLinkActive="active">Saved card</mat-list-item>
+                        <mat-list-item role="listitem" class="list" routerLink="/my-account/preferences" routerLinkActive="active">Marketing Preferences</mat-list-item>
+                        <mat-list-item role="listitem" class="list" routerLink="/my-account/refer" routerLinkActive="active">Refer a Teacher</mat-list-item>
+                    </mat-list>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                <div>
+                    <div class="pt-5">
+                        <div class="pt-4 pb-4" style="background: #EBF8F3;">
+                            <div class="pb-3">
+                                <span class="order-title">Order Processed</span>
+                            </div>
+                            <div>
+                                <span class="order-subtitle">[Name], thank you for your order!</span>
+                            </div>
+                            <div class="pb-4">
+                                <span class="order-subtitle-color">We have received your order and will contact you when your package is shipped. </span>
+                            </div>
+                        </div>
+
+                        <div class="pl-2 pt-3">
+                            <div class="pb-2">
+                                <span class="order-title">Order Summary</span>
+                            </div>
+                            <div>
+                                <span class="order-subtitle-color">June 12, 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pl-2 pt-4">
+                        <div class="pb-1">
+                            <div fxHide fxShow.gt-sm fxLayout="row" fxLayoutAlign="space-around center"  fxLayoutGap="gappx" class="pb-2 dsk-res">
+                                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+                                    <div fxLayoutAlign="start start" class="pl-3">
+                                        <span class="title">Items</span>
+                                    </div>
+                                </div>
+                                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" >
+                                    <div fxLayoutAlign="center start">
+                                        <span class="title">Price</span>
+                                    </div>
+                                </div>
+                                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" >
+                                    <div fxLayoutAlign="center start">
+                                        <span class="title">Quantity</span>
+                                    </div>
+                                </div>
+                                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" >
+                                    <div fxLayoutAlign="center start">
+                                        <span class="title">Total</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr fxHide fxShow.gt-sm>                        
+                        </div>
+
+                        <div *ngFor="let orderData of orderDatas">
+                            <app-your-order-details [order_details] = orderData></app-your-order-details>
+                        </div>
+
+                        <div>
+                            <div class="bord">
+                                <div fxLayout="row wrap" class="pb-2">
+                                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="space-between center">
+                                        <div class="pad-text">
+                                            <span class="item-title">Subtotal (2 items):</span>
+                                        </div>
+                                        <div class="pad-price">
+                                            <span class="item-price">174 FC</span>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div fxLayout="row wrap" class="pb-2">
+                                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="space-between center">
+                                        <div class="pad-text">
+                                            <span class="item-title">Discount</span>
+                                        </div>
+                                        <div class="pad-price">
+                                            <span class="item-price">-3 FC</span>                                   
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div fxLayout="row wrap" class="pb-2">
+                                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="space-between center">
+                                        <div class="pad-text">
+                                            <span class="item-title">Delivery</span>
+                                        </div>
+                                        <div class="pad-price">
+                                            <span class="item-price">1.50 FC</span>                                   
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                            <div>
+                                <div fxLayout="row wrap" class="pt-3">
+                                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100" fxLayoutAlign="space-between center">
+                                        <div class="pad-text">
+                                            <span class="item-titles">Total</span>
+                                        </div>
+                                        <div class="pad-price">
+                                            <span class="item-prices">172.50 FC</span>                                   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="row wrap">
+                        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                            <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="gappx" class="p-5">
+                                <div class="pb-3">
+                                    <span class="order-font-title">Billing Address</span>
+                                </div>
+                                <div class="pb-3">
+                                    <span class="order-font-subtitle">Jory Lenz</span>
+                                </div>
+                                <div>
+                                    <span class="order-font-lite">Address 1</span>
+                                </div>
+                                <div>
+                                    <span class="order-font-lite">City, State </span>
+                                </div>
+                                <div>
+                                    <span class="order-font-lite">Zip code</span>
+                                </div>
+                                <div>
+                                    <span class="order-font-lite">Country</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                            <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="gappx" class="p-5">
+                                <div class="pb-3">
+                                    <span class="order-font-title">Shipping Address</span>
+                                </div>
+                                <div class="pb-3">
+                                    <span class="order-font-subtitle">Jory Lenz</span>
+                                </div>
+                                <div>
+                                    <span class="order-font-lite">Address 1</span>
+                                </div>
+                                <div>
+                                    <span class="order-font-lite">City, State </span>
+                                </div>
+                                <div>
+                                    <span class="order-font-lite">Zip code</span>
+                                </div>
+                                <div>
+                                    <span class="order-font-lite">Country</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

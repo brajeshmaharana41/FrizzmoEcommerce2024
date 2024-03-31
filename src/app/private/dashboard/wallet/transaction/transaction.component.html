@@ -1,0 +1,35 @@
+<div class="head">
+    <div class="view">
+        <span class="title">Transactions</span>
+    </div>
+</div>
+    <div class="view">
+        <mat-card class="trs-card">
+              <div fxLayout="row wrap" *ngFor="let element of dataSource">
+                  <div fxFlex.xs="10" fxFlex.sm="10" fxFlex.md="10" fxFlex.lg="10" fxFlex.xl="10">
+                    <div fxLayoutAlign="center center" class=" pb-3">
+                        <div class="tranbord">
+                            <mat-icon class="iconcolor">{{element.icon}}</mat-icon>
+                        </div>
+                    </div>
+                  </div>
+                  <div fxFlex.xs="60" fxFlex.sm="70" fxFlex.md="70" fxFlex.lg="70" fxFlex.xl="70">
+                    <div fxLayoutAlign="start center" class="pl-2">
+                        <div>
+                            <span class="ordtitle">{{element.name}}</span>
+                            <div>
+                                <span class="orddata">{{element.date}}</span>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div fxFlex.xs="30" fxFlex.sm="20" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+                    <div fxLayoutAlign="end center" class="">
+                        <div>
+                            <span [ngClass]="element.succescolor">{{element.price}}</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </mat-card>
+    </div>

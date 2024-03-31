@@ -1,0 +1,65 @@
+.stu-brd{
+    border: 1px solid #F2F2F2;
+    height: 500px;
+    text-align: center;
+    background-color: #F2F2F2;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.example-full-width {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    color: #000000;
+}
+.btn{
+    width: 100%;
+    height: 55px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.btn-colrs{
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    color: #ffffff;
+}
+.btn-colr{
+    background: #F2F2F2;
+    color: #00AA75;
+    border: 1px solid #00AA75;
+}
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.subtitle{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+@media only screen and (min-width: 50px) and (max-width: 500px){
+    .stu-brd{
+        height: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .example-full-width {
+        font-size: 12px;
+        color: #8E8E8E;
+    }
+    .btn{
+        height: 55px;
+        font-size: 15px;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .subtitle{
+        font-size: 14px;
+    }
+}

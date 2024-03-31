@@ -1,0 +1,50 @@
+<div class="p-2">
+    <mat-card class="p-0">
+        <div>
+            <div fxLayoutAlign="center center" fxLayoutGap="gappx" class="order-bgr">
+                <div class="order-bd">
+                    <div>
+                        <img class="img-brd" src="{{yourOrder_Data.image}}">
+                    </div>
+                </div>
+            </div>
+            <div class="p-4">
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+                    <div>
+                        <span class="order-font">{{yourOrder_Data.title}}</span>
+                        <div fxLayout="row">
+                            <div>
+                                <span class="order-font">Date:</span>
+                            </div>
+                            <div>
+                                <span class="order-font-color">{{yourOrder_Data.date}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="order-btn">{{yourOrder_Data.item}}</a>
+                    </div>
+                </div>
+                <div fxLayout="row" class="pb-3">
+                    <div>
+                        <span class="order-font">Total:</span>
+                    </div>
+                    <div>
+                        <span class="order-font-color">{{yourOrder_Data.total}} FC</span>
+                    </div>
+                </div>
+                <div fxLayout="row" class="pb-3">
+                    <button mat-button class="rev-text" [routerLink]="['/review-input']" routerLinkActive="router-link-active"  >{{yourOrder_Data.reviewStates}}</button>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+                    <div>
+                        <a class="order-font" style="cursor: pointer;">{{yourOrder_Data.track}}</a>
+                    </div>
+                    <div>
+                        <a class="order-font" routerLink="/my-account/orders/orders-list">{{yourOrder_Data.details}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>

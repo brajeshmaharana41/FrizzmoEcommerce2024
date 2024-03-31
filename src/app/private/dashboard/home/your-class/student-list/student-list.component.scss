@@ -1,0 +1,98 @@
+.bordimg{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    justify-content: center;
+}
+.subtitle{
+    font-size: 10px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    justify-content: center;
+    color: #7E84A3;
+}
+.pricefont{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    justify-content: center;
+    color: #000000;
+}
+.nogiftcolor{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    justify-content: center;
+    color: #B3B3B3;
+}
+.gitdel{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    justify-content: center;
+    color: #00AA75;
+}
+.giticoncolor{
+    color: #00AA75;
+}
+.deleticoncolor{
+    color: red;
+}
+.imgclass{
+    border-radius: 30px;
+}
+.tab-icon {
+    font-size: 25px;
+  }
+
+  .bord{
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+.brd-icon{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00AA75;
+    border-radius: 30px;
+}
+.img-rwd{
+    width: 40px;
+    border-radius: 2rem;
+}
+.stu-icon-logo{
+    width: 20px;
+}
+.mob-dec{
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+.mob-dec-list{
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+.stuinvit{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    justify-content: center;
+    color: #00AA75;
+    cursor: pointer;
+}

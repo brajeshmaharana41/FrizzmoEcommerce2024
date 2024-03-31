@@ -1,0 +1,240 @@
+.title{
+    font-size: large;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.date{
+    font-size: small;
+    font-weight: 500;
+    font-family: "Montserrat";
+    width: 180px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D7DBEC;
+}
+.dates{
+    font-size: small;
+    font-weight: 500;
+    font-family: "Montserrat";
+    width: 200px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #D7DBEC; 
+    background-color: white;
+}
+.range{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+    color:#5A607F;
+}
+.week{
+    display: none;
+}
+.weeks{
+    display: block;
+}
+mat-button-toggle-group {
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  mat-button-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    height: 30px;
+    font-weight: 500;
+}
+  .mat-button-toggle-checked {
+    font-family: "Montserrat";
+    font-weight: 500;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00AA75;
+    color: #ffff;
+  }
+  .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+    color: #ffff !important;
+}
+.view-btn{
+    border: 1px solid #02b47c;
+    background: #cceee3;
+    color: #00AA75;
+    box-shadow: 0px 0px 0px 0px;
+}
+.view-btns{
+    border: 1px solid #f8617d;
+    background: #ffcbcb;
+    color: #FF0F3D;
+    box-shadow: 0px 0px 0px 0px;
+}
+.view-desk{
+    display: block;
+}
+.view-mob{
+    display: none;
+}
+
+.view-price{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.view-title{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    color: #5A607F;
+}
+.view-card{
+    box-shadow: 0px 0px 1px 0px #b3b3b3;
+}
+.mob-icons{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desk-icons{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .view-title{
+        font-size: 13px;
+    }
+    .view-price{
+        font-size: 23px;
+    }    
+}
+@media only screen and (min-width: 960px) and (max-width: 991px){
+    .view-desk{
+        display: none;
+    }
+    .view-mob{
+        display: block;
+    }
+    .view-title{
+        font-size: 9px;
+    }
+    .view-price{
+        font-size: 18px;
+    }  
+}
+
+@media only screen and (min-width: 100px) and (max-width: 959px){
+    .weeks{
+        display: none;
+    }
+    .week{
+        display: block;
+    }
+}
+@media only screen and (min-width: 483px) and (max-width: 767px){
+    .view-title{
+        font-size: 13px;
+    }
+    .view-price{
+        font-size: 23px;
+    } 
+}
+@media only screen and (min-width: 414px) and (max-width: 482px){
+    .view-title{
+        font-size: 10px;
+    }
+    .view-price{
+        font-size: 18px;
+    } 
+    .view-desk{
+        display: none;
+    }
+    .view-mob{
+        display: block;
+    }
+    .date{
+        font-size: 10px;
+        width: 150px;
+        height: 25px;
+    }
+    .dates{
+        font-size: 11px;
+        width: 180px;
+        height: 25px;
+    }
+    mat-button-toggle-group {
+        height: 25px;
+      }
+      mat-button-toggle {
+        height: 25px;
+            font-size: 10px;
+    }
+      .mat-button-toggle-checked {
+        height: 25px;
+        font-size: 10px;
+      }
+    .range{
+        font-size: 15px;
+        margin-right: 4px;
+    }
+}
+@media only screen and (min-width: 100px) and (max-width: 413px){
+    .view-title{
+        font-size: 8px;
+    }
+    .view-price{
+        font-size: 15px;
+    }
+    .view-desk{
+        display: none;
+    }
+    .view-mob{
+        display: block;
+    } 
+    .date{
+        font-size: 8px;
+        width: 135px;
+        height: 25px;
+    }
+    .dates{
+        font-size: 10px;
+        width: 150px;
+        height: 25px;
+    }
+    mat-button-toggle-group {
+        height: 25px;
+      }
+      mat-button-toggle {
+        height: 25px;
+        font-size: 8px;
+    }
+      .mat-button-toggle-checked {
+        height: 25px;
+        font-size: 8px;
+      }
+    .range{
+        font-size: 15px;
+        margin-right: 4px;
+    }
+    .range{
+        font-size: 15px;
+        margin-right: 4px;
+    }   
+}
+
+::ng-deep .mat-datepicker-toggle, .mat-datepicker-content .mat-calendar-next-button, .mat-datepicker-content .mat-calendar-previous-button {
+    font-size: 5px !important;
+}
+
+

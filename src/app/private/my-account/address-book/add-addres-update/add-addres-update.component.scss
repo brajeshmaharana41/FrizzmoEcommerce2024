@@ -1,0 +1,47 @@
+.example-full-width{
+    width: 100%;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 600;
+}
+.address-btn{
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    width: 300px;
+    height: 50px;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 600;
+}
+.addres-select{
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+@media only screen and (min-width: 150px) and (max-width: 500px){
+    .addres-select{
+        font-size: 12px;
+    }
+    .address-btn{
+        width: 200px;
+        height: 50px;
+        font-size: 13px;
+    }
+}
+.addres-title{
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+.radio-title{
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 400;
+}
+.lable-img{
+    width: 18px;
+}
+.bord{
+    border-bottom: 1px solid #B4B4B4;
+}

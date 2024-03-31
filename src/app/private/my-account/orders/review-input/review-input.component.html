@@ -1,0 +1,143 @@
+<app-main-header [i] = index></app-main-header>
+<div class="background">
+    <div class="container">
+        <div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+                <div class="pt-5">
+                    <div class="pt-5 pb-2 pl-3">
+                        <div class="pb-4">
+                            <span class="order-title">Create Review</span>
+                        </div>
+                        <div>
+                            <span class="order-subtitle">School Bag Canvas with Art Kit</span>
+                        </div>
+                    </div>
+                    <div class="bord pt-2">
+                    </div>
+                    <div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                        <div fxFlex.xs="100" fxFlex.sm="30" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20" class="pt-3 pb-3">
+                            <div fxLayoutAlign="start">
+                                <div class="brd-rev">
+                                    <img src="../../../../../assets/product1.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div  fxFlex.xs="100" fxFlex.sm="70" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80" class="pt-3 pb-3">
+                            <div fxLayoutAlign="start">
+                                <div class="brd-rev" fxLayout="column">
+                                    <span class="prd-det pt-2">Bag of Assorted Stationery</span>
+
+                                    <span class="prd-det pt-2">Crayons , Sketch Pens.</span>
+                                    
+                                    <span class="prd-det pt-2">Total <span class="rev-price">10.0 FC</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form [formGroup]="reviewForm" (ngSubmit)="onClickSubmit(reviewForm.value)">
+                        <div class="bord pt-2">
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+                            <div class="pt-4 pb-2 pl-3">
+                                <div class="pb-4">
+                                    <span class="order-title2">Overall Rating</span>
+                                </div>
+                                <div fxLayout="row">
+                                    <ngb-rating class="rev-icon" [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+                                </div>
+                                <div class="pt-3">
+                                    <mat-error *ngIf="">You Must Give at lest one star</mat-error>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bord pt-2">
+                        </div>
+                        <div class="pt-4 pb-0 pl-3">
+                            <div class="pb-4">
+                                <span class="order-title2">Add A Headline</span>
+                            </div>
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx" class="pt-0 pb-3 pl-3">
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                                <div class="brd-rev" fxLayout="column">
+                                    <mat-form-field class="rev-input">
+                                        <input matInput placeholder="What's most important to know?" formControlName="title">
+                                        <mat-error *ngIf="myError('title', 'required')">You Must Enter Headline</mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 pb-0 pl-3">
+                            <div class="pb-4">
+                                <span class="order-title2">Add a written review</span>
+                            </div>
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx" class="pt-0 pb-3 pl-3">
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                                <div class="brd-rev" fxLayout="column">
+                                    <mat-form-field class="rev-input">
+                                        <input matInput placeholder="What did you like or dislike? What did you use this product for?" formControlName="dec">
+                                        <mat-error *ngIf="myError('dec', 'required')">You Must Enter Something</mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4 pb-0 pl-3">
+                            <div class="pb-4" fxLayout="column">
+                                <span class="order-title2 pb-3">Add a photo or video</span>
+                                <span class="order-subtitle">Shoppers find images and videos more helpful than text alone.</span>
+                            </div>
+                            <div class="file-input-wrapper" fxLayout="column" fxLayoutAlign="center center">
+                                <mat-icon>add</mat-icon>
+                                <span class="rev-up pt-2">Add Photo or Video</span>
+                                <input type="file" class="rev-uplode" multiple="multiple"
+                                id="avatar" name="avatar" (change)="uploadFileEvt($event)"
+                                accept="image/*, video/*">
+                            </div>
+                            <div class="pl-1 pt-3">
+                                <img [src]="url" *ngIf="format==='image' && url" height="200">
+                                <video [src]="url" *ngIf="format==='video' && url" controls height="200"></video>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-4 pb-0 pl-3">
+                            <div class="pb-4" fxLayout="column">
+                                <span class="order-title2 pb-3">Choose your public name</span>
+                                <span class="order-subtitle">This is how you'll appear to other customers</span>
+                            </div>
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx" class="pt-0 pb-3 pl-3">
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                                <div class="brd-rev" fxLayout="column">
+                                    <mat-form-field class="rev-input">
+                                        <mat-icon matPrefix class="input-icon mr-2">person_pin</mat-icon>
+                                        <input matInput class="pb-2" placeholder="What did you like or dislike? What did you use this product for?" formControlName="name">
+                                        <mat-error *ngIf="myError('name', 'required')">You Must Enter Name</mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                        <div fxLayout="row wrap">
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="70" fxFlex.lg="80" fxFlex.xl="80">
+                                <div fxLayoutAlign="end center">
+                                    <div class="brd-rev p-2">
+                                        <button mat-button class="dele-btns"(click)="DeletDialog()">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="30" fxFlex.lg="20" fxFlex.xl="20">
+                                <div fxLayoutAlign="end center">
+                                    <div class="brd-rev p-2">
+                                        <button mat-button class="rev-btn" (click)="SureDialog()" [disabled] = "!reviewForm.valid" type="submit">SUBMIT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>    
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

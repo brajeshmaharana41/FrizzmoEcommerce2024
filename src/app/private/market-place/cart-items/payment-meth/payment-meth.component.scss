@@ -1,0 +1,133 @@
+mat-checkbox{
+  border-radius: 30px;
+}
+.space{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.cvv{
+  width: 100%;
+}
+.example-full-width{
+  width: 100%;
+  padding: 10px;
+  font-weight: 300;
+  font-size: 14px;
+  font-family: 'Montserrat';
+
+}
+.center{
+  display: flex;
+  align-items: center;
+}
+.item-detal{
+  background: #F5F5F5;
+}
+
+.dtal-btn{
+width: 130px;
+height: 50px;
+border-radius: 30px;
+background: #fafafa;
+color: #B3B3B3;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 14px;
+font-family: "Montserrat";
+font-weight: 700;
+border: 1px solid #EBEBEB;
+margin-left: 20px;
+box-shadow: 1px 3px 5px 0px #b3b3b3;
+.btn-icon{
+    font-size: 18px;
+    padding-top: 3px;
+    padding-right: 10px;
+}
+}
+.dtal-btns{
+width: 130px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 30px;
+font-size: 14px;
+font-family: "Montserrat";
+box-shadow: 1px 3px 5px 0px #b3b3b3;
+font-weight: 700;
+background: linear-gradient(to left, #69bd65, #22ab72);
+color: #ffffff;
+margin-right: 20px;
+.btn-icon{
+    font-size: 18px;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+}
+.tbls{
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+.bls{
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+.paytbls{
+  font-weight: 600;
+  font-size: 15px;
+  font-family: 'Montserrat';
+  cursor: pointer;
+}
+.paybls{
+  font-weight: 400;
+  font-size: 13px;
+  font-family: 'Montserrat';
+  cursor: pointer;
+}
+.payicon{
+  font-size: 23px;
+  cursor: pointer;
+}
+.title {
+  font-weight: 300;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+.price {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+.titles {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Montserrat';
+}
+.prices {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Montserrat';
+
+}
+
+.head_title{
+  font-size: 16px;
+  font-family: 'Montserrat';
+}
+.mat-form-field + .mat-form-field {
+  margin-left: 80px;
+}
+
+.mat-expansion-panel-header {
+  flex-direction: row-reverse;
+
+  .mat-content {
+    padding-right: 120px;
+  }
+}

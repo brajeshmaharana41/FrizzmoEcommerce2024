@@ -1,0 +1,104 @@
+.view-btn{
+    border: 1px solid #02b47c;
+    background: #cceee3;
+    color: #00AA75;
+    box-shadow: 0px 0px 0px 0px;
+}
+.view-btns{
+    border: 1px solid #f8617d;
+    background: #ffcbcb;
+    color: #FF0F3D;
+    box-shadow: 0px 0px 0px 0px;
+}
+.view-desk{
+    display: block;
+}
+.view-mob{
+    display: none;
+}
+
+.view-price{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.view-title{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    color: #5A607F;
+}
+.view-card{
+    box-shadow: 0px 0px 1px 0px #707070;
+}
+.mob-icons{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.desk-icons{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .view-title{
+        font-size: 13px;
+    }
+    .view-price{
+        font-size: 23px;
+    }    
+}
+@media only screen and (min-width: 960px) and (max-width: 991px){
+    .view-desk{
+        display: none;
+    }
+    .view-mob{
+        display: block;
+    }
+    .view-title{
+        font-size: 9px;
+    }
+    .view-price{
+        font-size: 18px;
+    }  
+}
+@media only screen and (min-width: 450px) and (max-width: 767px){
+    .view-title{
+        font-size: 13px;
+    }
+    .view-price{
+        font-size: 23px;
+    } 
+}
+@media only screen and (min-width: 398px) and (max-width: 478px){
+    .view-title{
+        font-size: 10px;
+    }
+    .view-price{
+        font-size: 18px;
+    } 
+    .view-desk{
+        display: none;
+    }
+    .view-mob{
+        display: block;
+    }
+}
+@media only screen and (min-width: 100px) and (max-width: 397px){
+    .view-title{
+        font-size: 8px;
+    }
+    .view-price{
+        font-size: 15px;
+    }
+    .view-desk{
+        display: none;
+    }
+    .view-mob{
+        display: block;
+    }  
+}
+

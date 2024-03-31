@@ -1,0 +1,141 @@
+mat-accordion{
+  border-radius: 0px;
+      
+mat-expansion-panel{
+  border-radius: 0px;
+  }
+}
+
+.filter-title{
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #808080;
+}
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .example-radio-button {
+    margin: 5px;
+    color: #808080;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 600;
+  }
+  .brand{
+    margin: 5px;
+    font-size: 12px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #808080;
+  }
+  .more{
+    border: 1px solid #F0F0F0;
+    background-color: #ffffff;
+    color: #B3B3B3;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: "Montserrat";
+    font-weight: 700;
+  }
+.input{
+  width: 70px; 
+  height: 30px; 
+  text-align: center;
+  border: 2px solid #EBEBEB;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #808080;
+}
+.list-btn{
+  width: 40px;
+  height: 35px;
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #7E84A3;
+}
+.filter-input{
+  padding: 5px;
+}
+.filter-mob{
+    border-bottom: 1px solid #F5F5F5;
+}
+.filter-bottom{
+  margin-bottom: 15px;
+}
+.filter-tops{
+  margin-top: 10px;
+}
+.filter-top{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.filter-mob-btn{
+  margin: 5px;
+  width: 100px;
+  color: #00AA75;
+  border: 1px solid #00AA75;
+  border-radius: 10px;
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+.filter-mob-btns{
+  margin: 5px;
+  background: #00AA75;
+  color: white;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+.title{
+  font-size: 15px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #808080;
+  text-decoration: none;
+  cursor: pointer;
+}
+.title.active{
+  font-size: 15px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #00AA75;
+  text-decoration: none;
+  cursor: pointer;
+}
+.input{
+  width: 70px; 
+  height: 40px; 
+  text-align: center;
+  border: 2px solid #EBEBEB;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #808080;
+}
+.list-btn{
+  width: 35px;
+  height: 35px;
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  color: #7E84A3;
+}
+.filter-input{
+  padding: 5px;
+}

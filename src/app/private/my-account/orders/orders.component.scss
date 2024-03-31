@@ -1,0 +1,66 @@
+.background{
+    background: #fafafa;
+}
+.list{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: "Montserrat";
+    color: rgb(193,193,193);
+}
+.listcolor{
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.bord{
+    border-bottom: 1px solid #B4b4b4;
+}
+.item-head{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+a{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: "Montserrat";
+    color: #999999;
+    text-decoration: none;
+    padding: 20px;
+  }
+  a:hover {
+    border-bottom: 3px solid #00AA75;
+    color: #00AA75;
+   }
+  
+  a:active {
+    border-bottom: 3px solid #00AA75;
+    color: #00AA75;
+  }
+.account-mob{
+    display: block;
+}
+.account-list{
+    padding-top: 85px;
+}
+.bord{
+    border-bottom: 1px solid #B4B4B4;
+}
+.order-title{
+
+    font-size: 28px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.order-subtitle{
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.order-items{
+
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}

@@ -1,0 +1,52 @@
+<app-main-header [i] = index></app-main-header>
+<div class="background">
+    <div class="container">
+        <app-my-accont-header fxHide fxShow.lt-sm></app-my-accont-header>
+        <div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20" class="account-mob">
+                <div class="account-list">
+                    <app-side-menu></app-side-menu>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                <div>
+                    <div class="pt-5 pb-2">
+                        <div class="pb-4">
+                            <span class="order-title">Saved Cards</span>
+                        </div>
+                        <div>
+                            <span class="order-subtitle">View and delete your payment details</span>
+                        </div>
+                    </div>
+                    <div class="bord pt-2">
+                    </div>                    
+                    <div class="pt-2 pb-5">
+                        <div fxLayout="row wrap">
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                                <div class="p-2">
+                                    <mat-card class="book-address center">
+                                        <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                                            <div>
+                                                <mat-icon class="book-addrs-icon" (click)="openDialog()">add</mat-icon>
+                                            </div>
+                                            <div>
+                                                <span class="book-addrs-title" (click)="openDialog()">Add New Card</span>
+                                            </div>
+                                        </div>
+                                    </mat-card>
+                                </div>
+                            </div>
+    
+                            <div div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                                <div class="p-2">
+                                    <app-savedcard-data></app-savedcard-data>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

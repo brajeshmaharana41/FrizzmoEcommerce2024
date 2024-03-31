@@ -1,0 +1,68 @@
+.background {
+    background: linear-gradient(to left, #69bd65, #22ab72);    
+    justify-content: center;
+    height: 100vh; 
+    .logo {
+        justify-content: center;
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        img {
+            max-width: 200px;
+        }
+    }
+    .signup {
+        display: flex;
+        justify-content: center;
+        mat-card {
+            width: 370px;
+            height: 590px;
+            margin-bottom:30px ;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+        }
+    }
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cong{
+    max-width: 100%;
+}
+.title{
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.top{
+    padding-top: 60px;
+}
+.left{
+    padding-top: 25px;
+}
+.right{
+    padding-top: 27px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.but{
+    background: linear-gradient(to left, rgb(109, 196, 111), rgb(34,171,114));
+    border-radius: 30px;
+    width: 60%;
+    height: 50px;
+    color: white;
+    margin-top: 16px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+  }

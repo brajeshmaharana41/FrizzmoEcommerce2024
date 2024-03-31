@@ -1,0 +1,46 @@
+mat-toolbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #fafafa;   
+    border-bottom: 1px solid #F0F0F0;
+    border-top: 1px solid #F0F0F0;
+}
+.container{
+    scroll-behavior: smooth;
+}
+mat-button-toggle-group {
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    height: 48px;
+    border: 1px rgba(0,0,0,0) solid !important;
+  }
+  mat-button-toggle {
+    font-size: 12px;
+    font-weight: 700;
+    height: 48px;
+    font-family: "Montserrat";
+    color: #B3B3B3;
+    background-color: #fafafa;
+    border: 1px rgba(0,0,0,0) solid !important;
+}
+  .mat-button-toggle-checked {
+    font-family: "Montserrat";
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    color: #00AA75;
+    outline: none;
+    border: 0px;
+    border-bottom: 5px solid #00AA75 !important;
+  }
+@media (max-width: 500px){
+    .select{
+        font-size: 9px;
+    }
+}

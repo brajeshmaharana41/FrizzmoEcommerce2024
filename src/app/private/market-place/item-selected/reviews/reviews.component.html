@@ -1,0 +1,136 @@
+<mat-card>
+    <div>
+        <div fxLayout="row wrap">
+             <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md=40 fxFlex.lg="40" fxFlex.xl="40">
+                 <div class="bottom">
+                    <span class="family title">Reviews</span>
+                 </div>
+                 <div class="bottom">
+                     <div class="bottom">
+                        <span class="subtitle family">Customer reviews</span>
+                     </div>
+                    <div fxLayout="row">
+                        <ngb-rating class="rev-icon" [max]="5" [(rate)]="starRating" [readonly]="false"></ngb-rating>
+                        <div class="center" style="padding-left: 15px;">
+                            <span class="rates family">4.5 out of 5</span>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="bottom">
+                     <div class="bottom">
+                         <span class="global family">1053 global ratings</span>
+                     </div>
+                    <div>
+                        <div fxLayout="row"fxLayoutAlign="start center">
+                            <div>
+                                <span class="family ratebar">5 Star</span>
+                            </div>
+                            <mat-progress-bar mode="determinate" value="68" color="accent" class="bar"></mat-progress-bar>
+                            <div>
+                                <span class="family ratebar">69%</span>
+                            </div>
+                        </div>
+        
+                        <div fxLayout="row"fxLayoutAlign="start center">
+                            <div>
+                                <span class="family ratebar">4 Star</span>
+                            </div>
+                            <mat-progress-bar mode="determinate" value="17" class="bar" color="accent"></mat-progress-bar>
+                            <div>
+                                <span class="family ratebar">17%</span>
+                            </div>
+                        </div>
+        
+                        <div fxLayout="row"fxLayoutAlign="start center">
+                            <div>
+                                <span class="family ratebar">3 Star</span>
+                            </div>
+                            <mat-progress-bar mode="determinate" value="3" class="bar" color="accent"></mat-progress-bar>
+                            <div>
+                                <span class="family ratebar">3%</span>
+                            </div>
+                        </div>
+        
+                        <div fxLayout="row"fxLayoutAlign="start center">
+                            <div>
+                                <span class="family ratebar">2 Star</span>
+                            </div>
+                            <mat-progress-bar mode="determinate" value="5" class="bar" color="accent"></mat-progress-bar>
+                            <div>
+                                <span class="family ratebar">5%</span>
+                            </div>
+                        </div>
+        
+                        <div fxLayout="row"fxLayoutAlign="start center">
+                            <div>
+                                <span class="family ratebar">1 Star</span>
+                            </div>
+                            <mat-progress-bar mode="determinate" value="2" class="bar" color="accent"></mat-progress-bar>
+                            <div>
+                                <span class="family ratebar">2%</span>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md=60 fxFlex.lg="60" fxFlex.xl="60">
+                <div class="margin">
+                    <div style="margin-top: 35px; margin-bottom: 10px;">
+                        <span class="titles family">Michael</span>
+                    </div>
+                    <div fxLayout="row" class="bottom">
+                        <div class="center">
+                            <ngb-rating class="rev-icon" [max]="5" [(rate)]="starRating1" [readonly]="false"></ngb-rating>
+                        </div>
+                        <div class="center" style="padding-left: 10px;">
+                            <span class="rate family">Value for money! Great gifting option</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="margin">
+                    <div class="bottom">
+                        <span class="review family">Reviewed on 24 September 2020</span>
+                    </div>
+                    <div>
+                        <span class="dec family">Have you heard of color therapy?</span>
+                    </div>
+                    <div >
+                        <span class="dec family">
+                            It is sometimes also known as chromotheraphy and is used to correct physiological/psychological
+                            imbalances in the human body. It has proved to be beneficial to reduce stress, increase 
+                            concentration and soothe you so that you can regain your psychological balance.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="margin">
+                    <div style="margin-bottom: 10px;">
+                        <span class="family titles">Charles</span>
+                    </div>
+                    <div fxLayout="row">
+                        <div class="center">
+                            <ngb-rating class="rev-icon" [max]="5" [(rate)]="starRating2" [readonly]="false"></ngb-rating>
+                        </div>
+                        <div class="center" style="padding-left: 15px;">
+                            <span class="rate family">Loved it</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="margin">
+                    <div class="bottom">
+                        <span class="family review">Reviewed on 18 July 2020</span>
+                    </div>
+                    <div>
+                        <span class="dec family">Nice</span>
+                    </div>
+                </div>
+
+                <div class="margin">
+                    <a class="more" routerLink='/review-data' >See all reviews</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

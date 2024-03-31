@@ -1,0 +1,33 @@
+<div class="background">
+    <div style="background: linear-gradient(to left, #69bd65, #22ab72);">
+        <div class="container">
+            <div class="logo">
+                <img src="../../../assets/product-details/Group 25999.svg">
+            </div>
+            <div class="signup">
+                <mat-card class="card">
+                    <div class="left">
+                        <mat-card-title class="title">Email Verification </mat-card-title>
+                        <mat-card-title>Please verify your school provided email address.</mat-card-title>
+                        <mat-card-title class="subtitle">We have sent a 6-digit code to your email address, please enter it below.</mat-card-title>
+                            <form [formGroup]="verifyform" (ngSubmit)="onClickSubmit(verifyform.value)">
+                                <div class="example-container">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Enter 6 Digit Code</mat-label>
+                                        <input matInput placeholder="Enter 6 Digit Code" formControlName="emailCode" maxlength="6" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                        <mat-error *ngIf="myError('emailCode', 'required')">You must Enter 6 digit code sent to your Email</mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div class="top">
+                                    <span style="font-size: 11px; font-family: 'Montserrat'; font-weight: 500;">Haven't received the code? - <a style="color: rgb(34,171,114); text-decoration: none; cursor: pointer;">Resend</a></span>
+                                </div>
+                                <div class="pl-5 pr-5 pt-5">
+                                    <button mat-button [disabled] = "!verifyform.valid" class="auth_btn" type="submit">VERIFY</button>
+                                </div>
+                            </form>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>    
+</div>

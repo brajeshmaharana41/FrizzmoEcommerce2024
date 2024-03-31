@@ -1,0 +1,43 @@
+<app-main-header [i] = index></app-main-header>
+<app-select-head></app-select-head>
+<div style="background: #fafafa;">
+  <div class="container">
+    <mat-toolbar>
+      <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="70" fxFlex.lg="70" fxFlex.xl="70">
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle class="select" (click)="description()">Description</mat-button-toggle>
+            <mat-button-toggle class="select" (click)="options()">Options</mat-button-toggle>
+            <mat-button-toggle class="select" (click)="overview()">Overview</mat-button-toggle>
+            <mat-button-toggle class="select" (click)="reviews()">Reviews</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+      <div fxFlex.md="30" fxFlex.lg="30" fxFlex.xl="30">
+      </div>
+    </mat-toolbar>
+    <div fxLayout="row wrap">
+      <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md=70 fxFlex.lg="75" fxFlex.xl="75">
+          <section id="description" class="pb-4">
+            <app-description></app-description>
+          </section>
+          <section id="options" class="pb-4">
+            <app-options></app-options>
+          </section>
+          <section id="overview" class="pb-4">
+            <app-selected-overview></app-selected-overview>
+          </section>
+          <section id="reviews" class="pb-2">
+            <app-reviews></app-reviews>
+          </section>
+          <div>
+            <app-item-youmay-like></app-item-youmay-like>
+          </div>
+      </div>
+      <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md=30 fxFlex.lg="25" fxFlex.xl="25">
+        <app-item-price></app-item-price>
+      </div>
+    </div>
+  </div>
+</div>
+<app-main-footer></app-main-footer>

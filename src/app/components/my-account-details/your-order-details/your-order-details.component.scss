@@ -1,0 +1,121 @@
+  .title{
+    font-size: 12px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #808080;
+    word-wrap: break-word;
+    display: inline-block;
+    white-space: nowrap;
+    width: 150px;
+    overflow: hidden !important;
+    text-overflow: ellipsis;  
+  }
+  .price{
+    font-size: 13px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #808080;
+  }
+  @media only screen and (min-width: 960px) and (max-width: 991px){
+    .title{
+      width: 130px; 
+    }
+  }
+  @media only screen and (min-width: 430px) and (max-width: 767px){
+    .title{
+      width: 130px;
+    }
+    .quan{
+      width: 35px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text-muted{
+      padding-top: 10px;
+    }
+  }
+  @media only screen and (min-width: 350px) and (max-width: 429px){
+    .title{
+      width: 100px; 
+    }
+    .quan{
+      width: 35px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text-muted{
+      padding-top: 10px;
+    }
+  }
+    @media only screen and (min-width: 300px) and (max-width: 349px){
+      .title{
+        width: 60px; 
+      }
+      .bod-img{
+        width: 60px;
+        height: 50px;
+        .img-itms{
+          width: 100%;
+        }
+      }
+      .price{
+        font-size: 10px;
+      }
+      .quan{
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text-muted{
+        padding-top: 10px;
+      }
+    }
+  @media only screen and (min-width: 130px) and (max-width: 299px){
+    .title{
+      width: 40px; 
+    }
+    .quan{
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text-muted{
+      padding-top: 10px;
+    }
+  }
+
+.bord-center{
+    width: 80px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img-size{
+        width: 50px;
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 4000px){
+  .desk-list{
+    display: flex !important;
+  }
+  .mob-list{
+    display: none !important;
+  }
+}
+  @media only screen and (min-width: 130px) and (max-width: 959px){
+    .desk-list{
+      display: none !important;
+    }
+    .mob-list{
+      display: flex !important;
+    }
+  }

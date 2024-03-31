@@ -1,0 +1,34 @@
+<div class="background">
+    <div style="background: linear-gradient(to left, #69bd65, #22ab72);">
+        <div class="container">
+            <div class="logo">
+                <img src="../../../assets/product-details/Group 25999.svg">
+            </div>
+            <div class="signup">
+                <mat-card>
+                    <div class="left">
+                        <mat-card-title class="title">Forgot Password</mat-card-title>
+                        <mat-card-title>Don't Worry!</mat-card-title>
+                        <mat-card-title class="subtitle">Please enter the email address registered with us, we will send you a 6-digit verification code.</mat-card-title>
+                        <form [formGroup]="ForgotForm" (ngSubmit)="onClickSubmit(ForgotForm.value)">
+                            <div class="example-container">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Enter Email Address</mat-label>
+                                    <input matInput placeholder="pat@example.com" formControlName="emailForgot">
+                                    <mat-error *ngIf="myError('emailForgot', 'required')">You must Email Address</mat-error>
+                                    <mat-error *ngIf="myError('emailForgot', 'pattern')">Invalid Email Address</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="pl-5 pr-5 pad-top">
+                                <button mat-raised-button [disabled] = "!ForgotForm.valid" type="submit" class="auth_btn">Continue</button>
+                            </div>
+                        </form>
+                        <div class="pl-5 pr-5 pt-3">
+                            <button mat-button class="butt"  routerLink="/">BACK TO LOGIN</button>
+                        </div>                
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>    
+</div>

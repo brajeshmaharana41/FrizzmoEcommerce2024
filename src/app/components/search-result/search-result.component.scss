@@ -1,0 +1,69 @@
+.title{
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-weight: 600;
+    color: #2C312F;
+}
+.short{
+    border-bottom: 0px;
+}
+.sort{
+    height: 30px;
+    border-radius: 30px;
+    margin-left: 15px;
+}
+.sorts{
+    height: 30px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.fav-icon{
+    padding-top: 2px;
+    font-size: 19px;
+}
+mat-button-toggle{
+    font-family: "Montserrat";
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B3B3B3;
+    background-color: #fafafa;
+}
+::ng-deep .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+    color: #00AA75 !important;
+}
+.rod{
+    width: 100%;
+}
+
+@media only screen and (min-width: 150px) and (max-width: 770px){
+    .filter{
+        display: none;
+    }
+}
+.filter{
+    padding: 10px;
+}
+
+.filter-mob{
+    display: block;
+    border-bottom: 1px solid #fafafa;
+    box-shadow: 0px 2px 6px 0px #00000034;
+    height: 40px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+}
+.item-mob-icon{
+    color: #808080;
+}
+.item-filter{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    color: #808080;
+}

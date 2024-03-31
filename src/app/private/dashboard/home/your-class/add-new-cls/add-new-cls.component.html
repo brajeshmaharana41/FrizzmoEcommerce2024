@@ -1,0 +1,29 @@
+<div>
+    <form class="stu-brd" [formGroup]="classForm">
+        <div class="pt-5">
+            <div class="pt-5">
+                <span class="title">Add A Class </span>
+            </div>
+            <div class="pt-2 pb-1">
+                <span class="subtitle">Add a class manually.</span>
+            </div>
+        </div>
+        <div class="pt-5">
+            <mat-form-field class="example-full-width">
+                <mat-label>Add Class Name</mat-label>
+                <input matInput placeholder="Enter Name" name="className" formControlName="name">
+            </mat-form-field>
+        </div>
+        <div class="pt-4">
+            <div>
+                <button mat-button class="btn btn-colrs" [mat-dialog-close]="classForm.value"
+                    [disabled]="classForm.invalid">
+                    Add Class
+                </button>
+            </div>
+            <div class="pt-3">
+                <button mat-button class="btn btn-colr" mat-dialog-close>CLOSE</button>
+            </div>
+        </div>
+    </form>
+</div>

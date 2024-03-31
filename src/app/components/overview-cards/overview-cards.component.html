@@ -1,0 +1,22 @@
+<mat-card class="view-card" routerLink="/dashboard/wallet">
+    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="gappx">
+        <div>
+            <span class="view-title">{{walletData.title}}</span>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+        <div>
+            <span class="view-price">{{walletData.price}}</span>
+        </div>
+        <div class="view-desk">
+            <button mat-fab [ngClass]="walletData.iconcol">
+                <mat-icon class="desk-icons">{{walletData.icon}}</mat-icon>
+            </button>
+        </div>
+        <div class="view-mob">
+            <button mat-mini-fab [ngClass]="walletData.iconcol">
+                <mat-icon class="mob-icons">{{walletData.icon}}</mat-icon>
+            </button>
+        </div>
+    </div>
+</mat-card>

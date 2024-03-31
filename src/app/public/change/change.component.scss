@@ -1,0 +1,54 @@
+.header{
+    margin-top: 8%;
+   }
+   .row{
+     justify-content: center;
+     display: flex;
+   }
+   .parents{
+       width: 350px;
+   }
+   .pay{
+     width: 480px;
+   }
+    .submain{
+       width: 300px;
+     }
+     .main{
+       width: 300px;
+     }
+     .center{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     }
+     .mid{
+       width: 540px;
+       justify-content: center; 
+       display: flex; 
+       align-items: center;
+     }
+     button{
+       background: linear-gradient(to left, rgb(109, 196, 111), rgb(34,171,114));
+       border-radius: 30px;
+       width: 150px;
+       color: white;
+       margin-top: 4%;
+       font-family: 'Montserrat';
+     }
+     .title{
+       font-size: xx-large;
+       font-family: 'Montserrat';
+       font-weight: bold;
+     }
+     .subtitle{
+       font-size: large;
+       font-family: 'Montserrat';
+       font-weight: bold;
+       color: rgb(44,156,120);
+     }
+     .dec{
+       font-size: 15px;
+       font-family: 'Montserrat';
+     }

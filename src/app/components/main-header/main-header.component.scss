@@ -1,0 +1,162 @@
+.search-main{
+  font-size: 10px;
+}
+::ng-deep .mat-form-field-outline-start {
+  border-radius: 30px 0 0 30px !important;
+  min-width: 30px !important;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix{
+    padding: 13px 0 15px 0!important;
+    display: flex !important;
+    align-items: center !important;
+  }
+  ::ng-deep .mat-form-field-infix{
+    width: 100% !important;
+  }
+::ng-deep .mat-form-field-outline-end {
+  border-radius: 0 30px 30px 0 !important;
+  min-width: 30px !important;
+}
+.input-font{
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+.input-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #D8D8D8;
+}
+.logo-img{
+    width: 180px;
+}
+.tool-bars{
+  background-color: #ffffff;
+}
+.mob-logo-img{
+  width: 50px;
+}
+.my-account{
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+}
+.icons-head{
+  color: #D8D8D8;
+}
+.icons-head.active {
+  color: #00AA75;
+}
+.head-text{
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  color: #98A29F;
+}
+.tool-bar{
+  background: #ffffff;
+}
+
+.mob-search{
+  height: 50px;
+}
+.mob-head{
+ display: none;
+}
+.sub-head{
+  padding: 35px;
+}
+.tabs{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  color: #999999;
+  text-decoration: none;
+}
+a:hover {
+  color: #cceee3;
+ }
+
+a.active {
+  color: #00AA75;
+}
+
+.sub-title{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-top: 1px solid #F5F5F5;
+  border-bottom: 1px solid #F5F5F5;
+}
+.sch-list{
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 765px){
+  .mob-head{
+    display: block;
+   }
+   .desk-head{
+    display: none;
+   }
+   .sub-title{
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #F5F5F5;
+  }
+}
+@media (max-width: 550px){
+  .sub-head{
+    padding: 20px;
+  }
+  .tabs{
+    font-size: 12px;
+  }
+}
+@media (max-width: 350px){
+  .sub-head{
+    padding: 15px;
+  }
+  .tabs{
+    font-size: 10px;
+  }
+}
+.search-mob{
+  width: 100%;
+  height: 60px;
+  font-size: 12px;
+}
+
+.email_text{
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.profile_title{
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.img_profile{
+  width: 50px;
+  height: 50px;
+}
+.list_btn{
+  font-family: "Montserrat";
+}
+.prof_info{
+  width: 250px; 
+  height: 150px; 
+  background-color: #00AA75; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}

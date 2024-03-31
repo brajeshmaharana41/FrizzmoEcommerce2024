@@ -1,0 +1,58 @@
+<div class="background">
+    <div style="background: linear-gradient(to left, #69bd65, #22ab72);">
+        <div class="container">
+            <div class="logo">
+                <img src="../../../assets/product-details/Group 25999.svg">
+            </div>
+            <div class="signup">
+                <mat-card>
+                    <div class="left">
+                        <mat-card-title>Create new password</mat-card-title>
+                        <form [formGroup]="resetPassword" (ngSubmit)="onClickSubmit(resetPassword.value)">
+                            <div class="example-container">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Password</mat-label>
+                                    <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" maxlength="20" formControlName="password" >
+                                    <mat-error *ngIf="myError('password', 'required')"> You Must Enter Password</mat-error>
+                                    <mat-error *ngIf="myError('password', 'pattern')">Password should Includes upper lower case with special character and numbers. Be at least 8 characters</mat-error>
+                                    <div style="cursor: pointer;" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                        <mat-icon style="color: #EAEAEA; font-size: medium;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </div>
+                                </mat-form-field>
+                                
+                                <div class="card">
+                                    <div class="row">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <span class="inst">Includes both lower case and upper case letters</span>
+                                    </div>
+                                    <div class="row">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <span class="inst">Includes special character & number</span>
+                                    </div>
+                                    <div class="row">
+                                        <mat-icon class="check">check</mat-icon>
+                                        <span class="inst">Be at least 8 characters </span>
+                                    </div>
+                                </div>
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Confirm Password</mat-label>
+                                    <input matInput [type]="chide ? 'password' : 'text'" placeholder="Confirm Password" maxlength="20" formControlName="confirm_password" [errorStateMatcher]="confirmErrorMatcher">
+                                    <mat-error>{{ getErrorMessage('confirm_password') }}</mat-error>
+                                    <div style="cursor: pointer;" mat-icon-button matSuffix (click)="chide = !chide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="chide">
+                                        <mat-icon style="color: #EAEAEA; font-size: medium;">{{chide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                    </div>
+                                </mat-form-field>
+                            </div>
+                            <div *ngFor="let btn_info of btn_infos" class="pl-5 pr-5" style="padding-top: 59px;">
+                                <button mat-raised-button [disabled] = "!resetPassword.valid" routerLink="/" type="submit" class="auth_btn">VERIFY</button>
+                            </div>
+                        </form>
+                        <div class="pl-5 pr-5 pt-3">
+                            <button mat-button class="butt"  routerLink="/">BACK TO LOGIN</button>
+                        </div>     
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>    
+</div>

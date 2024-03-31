@@ -1,0 +1,26 @@
+<div class="background">
+    <div style="background: linear-gradient(to left, #69bd65, #22ab72);">
+        <div class="container">
+            <div class="logo">
+                <img src="../../../assets/product-details/Group 25999.svg">
+            </div>
+            <div class="signup">
+                <mat-card>
+                    <div class="left">
+                        <mat-card-title class="title">Congratulations! You’re all set</mat-card-title>
+                        <div class="top">
+                            <div class="center">
+                                <img class="cong" src="../../assets/cong.png">
+                            </div>
+                            <div class="right">
+                                <div *ngFor="let btn_info of btn_infos" class="pl-5 pr-5" style="padding-top: 32px;">
+                                    <app-buttons-btn  [btn_Data] = "btn_info" [routerLink]="['/dashboard']" ></app-buttons-btn>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>    
+</div>

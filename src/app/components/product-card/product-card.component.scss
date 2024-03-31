@@ -1,0 +1,76 @@
+.card{
+    min-width: 210px;
+    height: 260px;
+    box-shadow: 0px 0px 1px 0px #b3b3b3;  
+    border: 0.2px solid #f7f5f5;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.center{
+    justify-content: center;
+    display: flex;
+}
+.item-img{
+    position: absolute;
+}
+.like-img{
+    height: 130px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.like-icon{
+    padding-left: 145px;
+}
+.likes-icons{
+    color: #D8D8D8;
+}
+.likes-icon{
+    color: #00AA75;
+}
+.like-rate{
+    border: 1px solid #F5F5F5;
+    border-radius: 3px;
+    width: 35px;
+    height: 25px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.like-rates{
+    font-size: 10px;
+    font-weight: 700;
+    color: #B3B3B3;
+    width: 20px;
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+.like-price{
+    font-size: 20px;
+    font-weight: 600;
+    color: #7E84A3;
+    font-family: "Montserrat";
+}
+.like-title{
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    color: #131523;
+    cursor: pointer;
+}
+.like-subtitle{
+    font-size: 10px;
+    font-weight: 500;
+    color: #7E84A3;
+    font-family: "Montserrat";
+}
+.like-padd{
+    padding-top: 10px;
+}
+.prd-img{
+    cursor: pointer;
+}
