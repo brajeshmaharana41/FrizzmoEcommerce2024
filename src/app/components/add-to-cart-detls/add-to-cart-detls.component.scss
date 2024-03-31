@@ -1,0 +1,133 @@
+.quantity-box{
+    border: 1px solid #F0F0F0;
+    border-radius: 30px;
+    mat-icon{
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+  .input-number{
+    width: 48px;
+    text-align: center;
+    background-color: #fff;
+    color: #999999;
+    height: 100%;
+    border: none;
+    font-size: 12px;
+    font-family: "Montserrat";
+    border-left: 1px solid #F0F0F0;
+    border-right: 1px solid #F0F0F0;
+  }
+  .bod-img{
+    width: 90px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    .img-itms{
+      width: 40px;
+    }
+  }
+  .title{
+    font-size: 12px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #808080;
+    word-wrap: break-word;
+    width: 150px; 
+  }
+  .price{
+    font-size: 13px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #808080;
+  }
+  @media only screen and (min-width: 960px) and (max-width: 991px){
+    .title{
+      width: 130px; 
+    }
+  }
+  @media only screen and (min-width: 430px) and (max-width: 767px){
+    .title{
+      width: 130px;
+      font-size: 11px;
+    }
+
+    .quan{
+      width: 35px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text-muted{
+      padding-top: 10px;
+    }
+  }
+  @media only screen and (min-width: 350px) and (max-width: 429px){
+    .title{
+      width: 100px; 
+      font-size: 11px;
+    }
+    .prdleft{
+      padding-left: 5px;
+    }
+    .quan{
+      width: 35px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text-muted{
+      padding-top: 10px;
+    }
+  }
+    @media only screen and (min-width: 300px) and (max-width: 349px){
+      .title{
+        width: 60px; 
+        font-size: 8px;
+      }
+      .prdleft{
+        padding-left: 5px;
+      }
+      .bod-img{
+        width: 60px;
+        height: 50px;
+        .img-itms{
+          width: 100%;
+        }
+      }
+      .price{
+        font-size: 10px;
+      }
+      .quan{
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text-muted{
+        padding-top: 10px;
+      }
+    }
+  @media only screen and (min-width: 130px) and (max-width: 299px){
+    .title{
+      width: 40px; 
+      font-size: 8px;
+    }
+    .prdleft{
+      padding-left: 5px;
+    }
+    .quan{
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text-muted{
+      padding-top: 10px;
+    }
+  }
+ 

@@ -1,0 +1,39 @@
+<div>
+    <div class="stu-brd">
+        <div class="pt-4" fxLayoutAlign="center start">
+            <div class="bord">
+                <div class="stu-img">
+                    <img class="img-rwd" src="../../../../../../assets/product-details/josephpic.png">
+                </div>
+                <div fxLayoutAlign="end end" class="prd">
+                    <div class="brd-icon">
+                        <img class="stu-icon-logo" src="../../../../../../assets/std_profile_icon.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-2">
+            <div class="pt-2">
+                <span class="title">Joseph</span>
+            </div>
+            <div class="pt-2 pb-1">
+                <span class="subtitle">Standard -3 A</span>
+            </div>
+        </div>
+        <div class="pt-5">
+            <form [formGroup]="rewardform" (ngSubmit)="onClickSubmit(rewardform.value)">
+                <mat-form-field class="example-full-width pt-2">
+                    <input matInput formControlName="rewards" placeholder="What good decision/ behaviour are you rewarding?" >
+                </mat-form-field>
+            </form>
+        </div>
+        <div class="pt-4">
+            <div>
+                <button mat-button class="btn btn-colrs" routerLink="/market-place" mat-dialog-close [disabled] = "!rewardform.valid" type="submit">SEND REWARD</button>
+            </div>
+            <div class="pt-3">
+                <button mat-button class="btn btn-colr" mat-dialog-close>CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>

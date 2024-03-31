@@ -1,0 +1,32 @@
+<div class="background">
+    <div style="background: linear-gradient(to left, #69bd65, #22ab72);">
+        <div class="container">
+            <div class="logo">
+                <img src="../../../assets/product-details/Group 25999.svg">
+            </div>
+            <div class="signup">
+                <mat-card>
+                    <div class="left">
+                        <mat-card-title>Please verify your email address.</mat-card-title>
+                        <mat-card-title class="subtitle">We have sent a 6-digit code to your email address, please enter it below.</mat-card-title>
+                        <form [formGroup]="resetEmail" (ngSubmit)="onClickSubmit(resetEmail.value)">
+                            <div class="example-container">
+                                <mat-form-field class="example-full-width">
+                                    <mat-label>Enter 6 Digit Code</mat-label>
+                                    <input matInput placeholder="Enter 6 Digit Code" formControlName="codePin" maxlength="6" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                                    <mat-error *ngIf="myError('codePin', 'required')">You Must Enter 6 Digit Code</mat-error>
+                                </mat-form-field>
+                            </div>  
+                            <div class="top">
+                                <span style="font-size: 11px; font-family: 'Montserrat'; font-weight: 600;">Haven't received the code? - <a style="color: rgb(34,171,114); text-decoration: none; cursor: pointer;">Resend</a></span>
+                            </div>
+                            <div *ngFor="let btn_info of btn_infos" class="pl-5 pr-5 pad-top">
+                                <button mat-raised-button [disabled] = "!resetEmail.valid" type="submit" class="auth_btn">VERIFY</button>
+                            </div>
+                        </form>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>    

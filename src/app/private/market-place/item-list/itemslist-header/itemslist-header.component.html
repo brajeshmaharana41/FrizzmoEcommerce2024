@@ -1,0 +1,73 @@
+<mat-toolbar class="catogory">
+    <div class="container" fxLayout="row">
+        <div class="center">
+            <button mat-icon-button class="arrow-btn">
+                <mat-icon class="arrow-icon">arrow_back</mat-icon>
+            </button>        
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx" class="item-head">
+            <div class="pl-2">
+                <button mat-button class="chips-btn">Active Play & Physical Education</button>
+            </div>
+            <div class="pl-2">
+                <button mat-button class="chips-btn">Arts & Crafts</button>
+            </div>
+            <div class="pl-2">
+                <button mat-button class="chips-btn">Curriculum</button>
+            </div>
+            <div class="pl-2">
+                <button mat-button class="chips-btn">Teachers Resources</button>
+            </div>
+            <div class="pl-2">
+                <button mat-button class="chips-btn">Teachers Resources</button>
+            </div>
+            <div class="pl-2">
+                <button mat-button class="chips-btn">Furniture & Equipment</button>
+            </div>
+            <div class="pl-2">
+                <button mat-button class="chips-btn">School Supplies</button>
+            </div>
+        </div>
+        <div class="center pl-2">
+            <button mat-icon-button class="arrow-btn">
+                <mat-icon class="arrow-icon">arrow_forward</mat-icon>
+            </button>         
+        </div>
+    </div>
+    
+</mat-toolbar>
+<mat-toolbar class="short">
+    <div class="container">
+        <div>
+            <span class="title">Sort by: </span>
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="sort">
+                <mat-button-toggle value="bold">Popular</mat-button-toggle>
+                <mat-button-toggle value="italic">Price Low to High</mat-button-toggle>
+                <mat-button-toggle value="underline">Price High to Low</mat-button-toggle>
+                <mat-button-toggle value="italic">Sales & Deals</mat-button-toggle>
+                <mat-button-toggle value="underline">New Arrivals</mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+    </div>
+</mat-toolbar>
+
+<mat-toolbar class="filter-mob">
+    <div>
+        <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="dilog-left">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                <button mat-button class="dilog-btn" (click)="openshortDialog()">
+                    <mat-icon class="item-mob-icon">sort</mat-icon>
+                    <span class="item-filter">Sort</span>
+                </button>
+            </div>
+        </div>
+        <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="dilog-right">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                <button mat-button class="dilog-btn" (click)="opensfilterDialog()">
+                    <mat-icon class="item-mob-icon">filter_list</mat-icon>
+                    <span class="item-filter">Filter</span>
+                </button>    
+            </div>
+        </div>
+    </div>    
+</mat-toolbar>

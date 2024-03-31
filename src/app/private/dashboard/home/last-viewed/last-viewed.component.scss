@@ -1,0 +1,15 @@
+
+.title{
+    font-size: large;
+    font-weight: 600;
+    font-family: "Montserrat";
+    margin-top: 25px;
+}    
+.cardsrow{
+    flex-wrap: nowrap;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    overflow-x: auto;
+    padding-left: 20px;
+    justify-content: space-between;
+}

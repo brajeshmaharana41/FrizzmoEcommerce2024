@@ -1,0 +1,35 @@
+@media only screen and (min-width: 150px) and (max-width: 770px){
+    .item-mob{
+        display: block;
+    }
+    .item-desk{
+        display: none;
+    }
+}
+@media only screen and (min-width: 771px) and (max-width: 4500px){
+    .item-mob{
+        display: none;
+        padding-top: 50px;
+    }
+    .item-desk{
+        display: block;
+    }
+}
+.filter{
+    font-family: "Montserrat";
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.more{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    color: #00AA75;
+  }

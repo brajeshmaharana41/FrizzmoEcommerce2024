@@ -1,0 +1,189 @@
+<div style="background: #fafafa;">
+    <div fxLayout="row wrap" style="margin-bottom: 15px; margin-top: 20px;">
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="65" fxFlex.lg="65" fxFlex.xl="65">
+            <div>
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20" class="sub-items">
+                    <div class="sub-items" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div class="select" *ngFor="let imgData of imgDatas" (click)="onShowing(imgData.imgUrl)">
+                            <div class="brd" [class.active]="imgData.imgUrl === displayedImg">
+                                <img class="zomin" src="{{imgData.imgUrl}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div fxHide fxShow.gt-sm fxFlex.xs="100" fxFlex.sm="100" fxFlex.md=80 fxFlex.lg="80" fxFlex.xl="80">
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                        <div class="selects">
+                            <div class="icon">
+                                <button mat-icon-button aria-label="" (click)="toggleSelecteds()">
+                                    <mat-icon *ngIf="selecteds" class="icons-heads">favorite</mat-icon>   <mat-icon *ngIf="!selecteds" aria-label="" class="icons-head">favorite_border</mat-icon>
+                                </button>
+                            </div>
+                            <div class="center">
+                                <div class="bord_img">
+                                        <ng-img-magnifier
+                                        id="myresult"
+                                        class="center"
+                                        thumbImage={{displayedImg}}
+                                        fullImage={{displayedImg}}
+                                        [top]="'30'"
+                                        [right]="'24'"
+                                        [lensWidth]="'100'"
+                                        [lensHeight]="'100'"
+                                        [resultWidth]="'30'"
+                                        [resultHeight]="'50'"
+                                        [imgWidth]="'250'"
+                                        [imgHeight]="'250'"
+                                        >
+                                        </ng-img-magnifier>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div fxHide.gt-sm fxShow fxFlex.xs="100" fxFlex.sm="100" fxFlex.md=80 fxFlex.lg="80" fxFlex.xl="80">
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                        <div class="selects">
+                            <div class="icon">
+                                <button mat-icon-button aria-label="" (click)="toggleSelecteds()">
+                                    <mat-icon *ngIf="selecteds" class="icons-heads">favorite</mat-icon>   <mat-icon *ngIf="!selecteds" aria-label="" class="icons-head">favorite_border</mat-icon>
+                                </button>
+                            </div>
+                            <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third, forth]">
+                                <div *nguCarouselDef="let imgData of imgDatas;" class="item">
+                                    <div class="center">
+                                        <div class="bord_img">
+                                            <img *ngTemplateOutlet="imgData" src="{{imgData.imgUrl}}" width = "250" height = "250">
+
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <ng-template #first>
+                                    <img  width = "250" height = "250" src="'../../../../../assets/product-details/thum_1.svg">
+                                </ng-template>
+                            
+                                <ng-template #second>
+                                    <img  width = "250" height = "250" src="'../../../../../assets/product-details/thum_2.svg">
+                                </ng-template>
+                            
+                                <ng-template #third>
+                                    <img  width = "250" height = "250" src="'../../../../../assets/product-details/thum_3.svg">
+                                </ng-template>
+
+                                <ng-template #forth>
+                                    <img  width = "250" height = "250" src="'../../../../../assets/product-details/thum_4.svg">
+                                </ng-template>
+                            </ngu-carousel>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                        <ul class="myPoint" NguCarouselPoint>
+                            <li *ngFor="let j of myCarousel.pointNumbers;" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="35" fxFlex.lg="35" fxFlex.xl="35">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                <div>
+                    <div style="margin-bottom: 15px;" >
+                        <span class="title">School Bag Canvas with Art Kit</span>
+                    </div>       
+                    <div style="margin-bottom: 15px;">
+                        <span class="subtitle">Bag of Assorted Stationery 
+                            Crayons</span>
+                    </div>
+                    <div>
+                        <section class="example-section">
+                            <span class="example-list-section dec">
+                              Product Description
+                            </span>
+                            <div class="example-list-section">
+                              <ul>
+                                <li>
+                                    Sketch Pens
+                                </li>
+                                <li>
+                                    Oil Pastel
+                                </li>
+                                <li>
+                                    Gel pens
+                                </li>
+                                <li>
+                                    Mechanical Pencils
+                                </li>
+                                <li>
+                                    Multi Color
+                                </li>
+                                <li>
+                                    Clay with Kids Activity Book inside
+                                </li>
+                                <li>
+                                    Type: Art Set
+                                </li>
+                              </ul>
+                            </div>
+                          </section>
+                        <section class="carts">
+                            <div>
+                                <div class="bottom">
+                                    <span class="family titles">15 FC</span>
+                                </div>
+                                <div fxLayout="row" class="bottom">
+                                    <div class="center">
+                                        <span class="family subtitles">Color:</span>
+                                    </div>
+                                    <div class="center" style="padding-left: 20px;">
+                                        <div style="border: 6px solid #DE4D8A; border-radius: 6px;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div fxLayout="row" class="bottom">
+                                    <div class="center">
+                                        <span class="family shop">Shop</span>
+                                    </div>
+                                    <div class="pl-5">
+                                        <div style="border: 2px solid #F0F0F0; border-radius: 30px; width: 60px;">
+                                            <div fxLayout="row">
+                                                <div center><mat-icon class="rate center">star</mat-icon></div>
+                                                <div class="center"><span class="family rate">4.5</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div fxLayout="row" class="bottom">
+                                    <div class="center">
+                                        <mat-icon class="icon">local_shipping</mat-icon>
+                                    </div>
+                                    <div class="center">
+                                        <span class="family decs">Delivery of  1 FC, tomorrow</span>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <button mat-button class="family cart" routerLink="/market-place/item-selected/cart-items">
+                                        Add To Cart
+                                    </button>
+                                </div>
+                                <div fxLayout="row" >
+                                    <div class="center">
+                                        <button mat-icon-button aria-label="" (click)="toggleSelected()">
+                                            <mat-icon *ngIf="selected" class="icons-heads" routerLinkActive="active">favorite</mat-icon>   <mat-icon *ngIf="!selected" aria-label="" class="icons-head">favorite_border</mat-icon>
+                                        </button>
+                                    </div>
+                                    <div class="center">
+                                        <span class="family dec">Favorite</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

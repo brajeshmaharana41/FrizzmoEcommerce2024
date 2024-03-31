@@ -1,0 +1,102 @@
+.background{
+    background: #fafafa;
+}
+.list{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: "Montserrat";
+    color: rgb(193,193,193);
+}
+.listcolor{
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.account-list{
+    padding-top: 85px;
+}
+
+.order-title{
+
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.order-subtitle{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.book-address{
+    height: 250px;
+    cursor: pointer;
+}
+.dot{
+    font-size: 12px;
+}
+.dots{
+    font-size: 12px;
+    padding-right: 15px;
+}
+@media only screen and (min-width: 100px) and (max-width: 1199px){
+    .book-address{
+        height: 200px;
+    }
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-addrs-font{
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.font-color{
+    color: #B4B4B4;
+}
+.font-edit{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.book-addrs-title{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.book-addrs-icon{
+    font-size: 30px;
+    font-weight: 700;
+    color: #191919;
+}
+.card-img{
+    width: 80%;
+}
+.crd-bord{
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-bord{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 959px){
+    .account-mob{
+        display: none;
+    }
+}
+.bord{
+    border-bottom: 1px solid #B4B4B4;
+}

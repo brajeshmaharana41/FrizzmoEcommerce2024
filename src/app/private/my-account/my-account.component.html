@@ -1,0 +1,24 @@
+<app-main-header [i] = index></app-main-header>
+  <div class="background">
+    <div class="container">
+        <div class="pt-5">
+            <div class="p-3">
+                <span class="account-headtitle top">Good Evening</span>
+            </div>
+            <div class="p-3">
+                <span class="account-headsubtitle">Welcome to your account</span>
+            </div>
+        </div>
+        
+        <div class="pb-5">
+            <div fxLayout="row wrap">
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33" *ngFor="let accountDetail of accountDetails">
+                    <div class="p-3">
+                        <app-my-account-details [myAccount_Data] = "accountDetail"></app-my-account-details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<app-main-footer></app-main-footer>

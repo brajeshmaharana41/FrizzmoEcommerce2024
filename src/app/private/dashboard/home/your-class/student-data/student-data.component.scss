@@ -1,0 +1,175 @@
+.menu_icon{
+    border: 2px solid #f5ba13;
+    background-color: #22a565;
+    width: 25px;
+    height: 20px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-right: 0px !important;
+}
+.drop-btn{
+    border: 1px solid #D7DBEC;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.your-navbar{
+  display: block;
+  border-top: 1px solid #F0F0F0;
+  border-bottom: 1px solid #F0F0F0;
+  background-color: #fafafa;
+  padding: 0px;
+}
+.mob-cls{
+  display: none;
+}
+.desk-cls{
+  display: block;
+}
+.your-stu{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.your-stus{
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    color: #7E84A3;
+}
+.search-main{
+    width: 100%;
+    font-size: 8px;
+  }
+  ::ng-deep .mat-form-field-outline-start {
+    border-radius: 30px 0 0 30px !important;
+    min-width: 30px !important;
+  }
+  
+  ::ng-deep .mat-form-field-outline-end {
+    border-radius: 0 30px 30px 0 !important;
+    min-width: 30px !important;
+  }
+  .input-font{
+    font-size: 11px;
+    font-weight: 600;
+    font-family: "Montserrat";
+  }
+  .input-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: #D8D8D8;
+  }
+  .title{
+    font-size: large;
+    font-weight: 600;
+    font-family: "Montserrat";
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  .headtitle {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    justify-content: center;
+    color: #000000;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .more{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Montserrat";
+    color: #00AA75;
+  }
+.cls-btn{
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  color: #B3B3B3;
+}
+.cls-btns{
+  font-size: 11px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 3px 5px 0px #b3b3b3;
+  align-items: center;
+  color: #ffffff;
+  border-radius: 30px;
+  background: linear-gradient(to left, #69bd65, #22ab72);
+
+}
+.cls-btn:active{
+  color: #B3B3B3;
+}
+
+.cls-btn:focus{
+  color: #00AA75;
+}
+@media only screen and (min-width: 50px) and (max-width: 959px){
+  .mob-cls{
+    display: block;
+  }
+  .desk-cls{
+    display: none;
+  }
+}
+@media only screen and (min-width: 50px) and (max-width: 350px){
+  .cls-btns{
+    font-size: 7px;
+  }
+}
+.alph{
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Montserrat";
+  color: #7E84A3;
+  padding-left: 13px;
+  }
+  .alph:active{
+  color: #B3B3B3;
+  }
+  
+  .alph:focus{
+  color: #00AA75;
+  }
+  .brdclass{
+  background-color: #F0F0F0;
+  height: 30px;
+  }
+  .select{
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: "Montserrat";
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    color: #B3B3B3;
+  }
+  .select.active {
+    color: #00AA75;
+    font-size: 13px;
+    border-bottom: 4px solid #00AA75;
+   }
+   @media only screen and (min-width: 992px) and (max-width: 1199px){
+    .alph{
+      font-size: 13px;
+      padding-left: 10px;
+      }
+  }
+  @media only screen and (min-width: 960px) and (max-width: 992px){
+    .alph{
+      font-size: 10px;
+      padding-left: 7px;
+      }
+  }

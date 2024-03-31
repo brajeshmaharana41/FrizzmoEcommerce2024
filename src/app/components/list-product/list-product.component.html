@@ -1,0 +1,47 @@
+<div class="item-desk">
+    <div flex fxLayout="row" fxLayout.lt-sm="column" class="item-mob-bottom pt-2">
+        <div fxFlex="20">
+            <div class="bord-img" fxLayoutAlign="center center">
+                <img class="prd_img" routerLink="/market-place/item-selected" src="{{listProduct.image}}">
+            </div>
+        </div>
+        <div fxFlex="30" fxLayout="column" fxLayoutAlign="flex-start none" fxLayoutGap="gappx">
+            <div class="titles">
+                <span class="fonts">{{listProduct.title}}</span>
+            </div>
+            <div class="row">
+                <div class="space">
+                    <span class="review">{{listProduct.reviews}} Reviews </span>
+                </div>
+                <div class="space">
+                    <span class="review">{{listProduct.offers}} Offers</span>
+                </div>
+            </div>
+            <div class="subtitles">
+                <span class="font">{{listProduct.subtitle}}</span>
+            </div>
+        </div>
+        <div fxFlex="15" fxLayout="column" fxLayoutAlign="flex-start center">
+            <div class="titles">
+                <button class="btnicon"> <mat-icon style="font-size: 13px; padding-top: 4px;">star</mat-icon> {{listProduct.rating}}</button>
+            </div>
+        </div>
+        <div fxFlex="15" fxLayout="column" fxLayoutAlign="flex-start center">
+            <div class="titles">
+                <span class="price">{{listProduct.price}} FC</span>
+            </div>    
+        </div>
+        <div fxFlex="20" fxLayout="column" fxLayoutAlign="flex-start center">
+            <div class="titles">
+                <button mat-icon-button aria-label="" (click)="toggleSelected()">
+                    <mat-icon *ngIf="selected" class="icons-head" routerLinkActive="active">favorite</mat-icon>   <mat-icon *ngIf="!selected" aria-label="" class="icons-heads">favorite_border</mat-icon>
+                </button>
+            </div>
+            <div class="subtitles dec">
+                <button mat-button  class="buy" routerLink="/market-place/item-selected">
+                    {{listProduct.button_btn}}
+                </button>
+            </div>    
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.refer-card{
+    height: 100px;
+    background-color: #00AA75;
+    box-shadow: 0px 0px 1px 0px #b3b3b3;
+}
+.earn{
+    color: white;
+    cursor: pointer;
+}
+.earns{
+    font-size: 24px;
+    font-family: "Montserrat";
+    font-weight: 600;    color: white;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .earns{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    .earns{
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 50px) and (max-width: 294px){
+    .earns{
+        font-size: 18px;
+    }
+}

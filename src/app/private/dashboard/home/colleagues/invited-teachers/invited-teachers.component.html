@@ -1,0 +1,72 @@
+<app-main-header [i] = index></app-main-header>
+<div class="bg-color">
+    <div class="container">
+        <div class="pt-4 pb-4">
+            <div fxLayout="row warp" class="p-2">
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                        <div class="pt-3">
+                            <span class="title">Your invited teacher(s)</span>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="gappx">
+                        <div class="p-1">
+                            <div>
+                                <span class="titles family">SORT BY</span>
+                            </div>
+                            <div class="brd_fil" [matMenuTriggerFor]="menu">
+                                <div fxLayout="row">
+                                    <div><span matSuffix class="family sort_invite pl-2 pt-1" fxLayoutAlign="start center"> {{selectedsort}}</span></div>
+                                    <div><mat-icon fxLayoutAlign="end center">arrow_drop_down</mat-icon></div>
+                                </div>
+                            </div>
+                            <mat-menu #menu="matMenu">
+                                <button mat-menu-item class="family" *ngFor="let item of sorts" (click)="clicksortItem(item)">{{  item.menuText }}</button>
+                            </mat-menu>
+                        </div>
+                        <div class="p-1">
+                            <div>
+                                <span class="titles family">FILTER BY</span>
+                            </div>
+                            <div class="brd_fil" [matMenuTriggerFor]="menus">
+                                <div fxLayout="row">
+                                    <div><span matSuffix class="family sort_invite pl-2 pt-1" fxLayoutAlign="start center"> {{selectedfliter}}</span></div>
+                                    <div><mat-icon fxLayoutAlign="end center">arrow_drop_down</mat-icon></div>
+                                </div>
+                            </div>
+                            <mat-menu #menus="matMenu">
+                                <button  mat-menu-item class="family" *ngFor="let item of filters" (click)="clickfliterItem(item)">{{  item.filterText }}</button>
+                            </mat-menu>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div fxLayout="row wrap">
+                <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" >
+                    <div class="p-2">
+                        <app-invite-btn></app-invite-btn>
+                    </div>     
+                </div>
+                <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" *ngFor="let techpending of techpendings">
+                    <div class="p-2">
+                        <app-invitedtls-cards  [invitepending] = "techpending"></app-invitedtls-cards>
+                    </div>
+                </div>
+                <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" *ngFor="let techconform of currentData let i = index">
+                    <div class="p-2">
+                        <app-invite-conform [inviteconform] = "techconform"></app-invite-conform>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-3 pt-5 pb-5" fxLayout="row" fxLayoutAlign="center center">
+                <span class="more" (click)="onload()">Loading....</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-main-footer></app-main-footer>

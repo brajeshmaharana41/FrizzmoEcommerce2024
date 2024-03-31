@@ -1,0 +1,17 @@
+.item-head{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+  .list{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: "Montserrat";
+    color: rgb(193,193,193);
+    text-decoration: none;
+    padding: 20px;
+}
+.list.active{
+    font-weight: 500;
+    border-bottom: 3px solid #00AA75;
+    color: #00AA75;
+}

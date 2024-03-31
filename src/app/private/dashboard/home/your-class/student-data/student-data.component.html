@@ -1,0 +1,175 @@
+<app-main-header [i] = index></app-main-header>
+<div style="background-color: #fafafa;">
+    <div class="container">
+        <div class="pt-3 pb-3">
+            <div fxLayout="row warp" class="p-2">
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+                    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+                        <div>
+                            <span class="title">Your Classes</span>
+                        </div>
+                        <div>
+                           <button mat-button matSuffix class="drop-btn" [matMenuTriggerFor]="menu">Add new class
+                            <mat-icon>arrow_drop_down</mat-icon>
+                           </button>
+                           <mat-menu #menu="matMenu">
+                            <button mat-menu-item (click)="addclsDialog()">Create a new class</button>
+                            <button mat-menu-item (click)="googleclsDialog()">Google Classroom <mat-icon class="menu_icon">group</mat-icon></button>
+                          </mat-menu>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="desk-cls">
+                <div fxLayout="row warp" fxLayoutAlign="space-between center" class="your-navbar">
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                        <div fxLayout="row" fxLayoutAlign="start center" class="p-2">
+                            <div *ngFor="let state of states" (click)="setStateAsActive(state)">
+                                <a class="select" [class.active]="state === activeState">{{state}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                        <div fxLayout="row" fxLayoutAlign="end start" class="pt-3 pb-3">
+                            <div class="pr-3">
+                                <button mat-button class="cls-btns" (click)="reupdateDialog()">Class Options</button>
+                            </div>
+                            <div class="pr-3">
+                                <button mat-button class="cls-btns" (click)="addstuDialog()">Add Student</button>
+                            </div>
+                            <div>
+                                <button mat-button class="cls-btns" (click)="invteDialog()">Invite Class</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mob-cls">
+                <div fxLayout="row warp" fxLayoutAlign="space-between center" class="your-navbar">
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                        <div fxLayout="row" fxLayoutAlign="space-between center" class="pt-2">
+                            <div>
+                                <button mat-button class="cls-btns" (click)="reupdateDialog()">Class Options</button>
+                            </div>
+                            <div>
+                                <button mat-button class="cls-btns" (click)="addstuDialog()">Add Student</button>
+                            </div>
+                            <div>
+                                <button mat-button class="cls-btns" (click)="invteDialog()">Invite Class</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                        <div fxLayout="row" fxLayoutAlign="space-between center" class="p-2">
+                            <div *ngFor="let state of states" (click)="setStateAsActive(state)">
+                                <a class="select" [class.active]="state === activeState">{{state}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <mat-card>
+                <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+                        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                            <mat-form-field appearance="outline" class="search-main">
+                                <input matInput placeholder="Search" class="input-font ml-2">
+                                <button mat-icon-button aria-label="" matPrefix class="ml-2">
+                                    <mat-icon class="input-icon">search</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div fxHide fxShow.gt-sm fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="60" fxFlex.lg="60" fxFlex.xl="60" >
+                        <div fxLayout="row" fxLayoutAlign="center center" class="pt-2 pb-3">
+                            <div> 
+                                <a class="alph">A</a>
+                                <a class="alph">B</a>
+                                <a class="alph">C</a>
+                                <a class="alph">D</a>
+                                <a class="alph">E</a>
+                                
+                                <a class="alph">F</a>
+                                <a class="alph">G</a>
+                                <a class="alph">H</a>
+                                <a class="alph">I</a>
+                                <a class="alph">J</a> 
+        
+                                <a class="alph">K</a>
+                                <a class="alph">L</a>
+                                <a class="alph">M</a>
+                                <a class="alph">N</a>
+                                <a class="alph">O</a> 
+        
+                                <a class="alph">P</a>
+                                <a class="alph">Q</a>
+                                <a class="alph">R</a>
+                                <a class="alph">S</a>
+                                <a class="alph">T</a> 
+        
+                                <a class="alph">U</a>
+                                <a class="alph">V</a>
+                                <a class="alph">W</a>
+                                <a class="alph">X</a>
+        
+                                <a class="alph">Y</a>
+                                <a class="alph">Z</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+                        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                            <div>
+                                <mat-checkbox class="your-stu"> Students on Frizzmo only</mat-checkbox>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  <div>
+                    <div>
+                        <div fxHide fxShow.gt-sm fxLayout="row" fxLayoutAlign="start center" class="brdclass">
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="30" fxFlex.lg="30" fxFlex.xl="30">
+                                <div fxLayoutAlign="start center" class="pl-3">
+                                    <span class="headtitle">Student</span>
+                                </div>
+                            </div>
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20" >
+                                <div fxLayoutAlign="end center" >
+                                    <a class="headtitle" (click)="toggleSelected()">Total Contributed   
+                                        <button mat-icon-button>
+                                            <mat-icon *ngIf="selected">keyboard_arrow_down</mat-icon> <mat-icon *ngIf="!selected" >keyboard_arrow_up</mat-icon>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+                                <div fxLayoutAlign="center center">
+                                    <span class="headtitle">Number of Item Gifted</span>
+                                </div>
+                            </div>
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+                                <div fxLayoutAlign="center center">
+                                    <span class="headtitle">Last Gift Status</span>
+                                </div>
+                            </div>
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="10" fxFlex.lg="10" fxFlex.xl="10">
+                                <div fxLayoutAlign="center center">
+                                    <span class="headtitle">Gift Now</span>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div *ngFor="let dataSource of currentData let i = index">
+                        <app-student-list [studentClass] = "dataSource"></app-student-list>
+                      </div>
+                      <div class="pl-3 pt-5" fxLayoutAlign="center center">
+                          <a class="more" (click)="onload()">Loading ...</a>
+                      </div>
+                  </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

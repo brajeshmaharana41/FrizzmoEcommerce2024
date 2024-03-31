@@ -1,0 +1,164 @@
+<form [formGroup]="delivery_addressDetails" (ngSubmit)="onClickSubmit(delivery_addressDetails.value)">
+    <mat-card>
+        <div class="row justify">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>First Name</mat-label>
+                            <input matInput placeholder="Jory" formControlName="firstname">
+                            <mat-error *ngIf="myError('firstname', 'required')">You Must Enter First Name</mat-error>
+                        </mat-form-field>                    
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Last Name</mat-label>
+                            <input matInput placeholder="Lenz" formControlName="lastname">
+                            <mat-error *ngIf="myError('lastname', 'required')">You Must Enter Last Name</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Country</mat-label>
+                            <input  type="text" placeholder="Country"
+                                formControlName="country"
+                                matInput
+                                [matAutocomplete]="auto">
+                                <mat-error *ngIf="myError('country', 'required')">You Must Select A Country</mat-error>
+                                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                    <mat-option *ngFor="let countrys of country" [value]="countrys">
+                                        {{countrys}}
+                                    </mat-option>
+                                </mat-autocomplete>
+                                <button mat-icon-button matSuffix>
+                                    <mat-icon  class="serc">arrow_drop_down</mat-icon>
+                                </button>
+                        </mat-form-field>                    
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>City</mat-label>
+                            <input  type="text" placeholder="City"
+                            formControlName="city"
+                            matInput
+                            [matAutocomplete]="uscity">
+                            <mat-error *ngIf="myError('city', 'required')">You Must Select A City</mat-error>
+                            <mat-autocomplete autoActiveFirstOption #uscity="matAutocomplete">
+                                <mat-option *ngFor="let citys of city" [value]="citys">
+                                    {{citys}}
+                                </mat-option>
+                            </mat-autocomplete>
+                            <button mat-icon-button matSuffix>
+                                <mat-icon  class="serc">arrow_drop_down</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>State</mat-label>
+                            <input  type="text" placeholder="States"
+                            formControlName="states"
+                            matInput
+                            [matAutocomplete]="usstate">
+                            <mat-error *ngIf="myError('states', 'required')">You Must Select A State</mat-error>
+                            <mat-autocomplete autoActiveFirstOption #usstate="matAutocomplete">
+                                <mat-option *ngFor="let state of states" [value]="state">
+                                    {{state}}
+                                </mat-option>
+                            </mat-autocomplete>
+                            <button mat-icon-button matSuffix>
+                                <mat-icon  class="serc">arrow_drop_down</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Zip Code</mat-label>
+                            <textarea matInput placeholder="10560" formControlName="postalcode" maxlength="6" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"></textarea>
+                            <mat-error *ngIf="myError('postalcode', 'required')">You Must Enter Postal Code</mat-error>
+                        </mat-form-field>                    
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Address</mat-label>
+                            <textarea matInput placeholder="334 Furman St  Brooklyn, NY 11201 " formControlName="address"></textarea>
+                            <mat-error *ngIf="myError('address', 'required')">You Must Enter Address</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Phone</mat-label>
+                            <input matInput placeholder="(718) 222-9939" formControlName="phone" maxlength="14" mask="(000) 000-0000">
+                            <mat-error *ngIf="myError('phone', 'required')">You Must Enter Phone Number</mat-error>
+                        </mat-form-field>                   
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Email" formControlName="email">
+                            <mat-error *ngIf="myError('email', 'required')">You Must Enter Email Address</mat-error>
+                            <mat-error *ngIf="myError('email', 'pattern')">Invalid Email Address</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxLayout="row wrap">
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="p-1">
+                        <div class="bord">
+                            <div fxLayout="row">
+                                <mat-radio-button class="center mr-3"></mat-radio-button>
+                                <div>
+                                    <div>
+                                        <span class="price-rdo">1.67 FC</span>
+                                    </div>
+                                    <div>
+                                        <span class="title-rdo">UPS Delivery (10-12 Days)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="p-1">
+                        <div class="bord">
+                            <div fxLayout="row">
+                                <mat-radio-button class="center  mr-3"></mat-radio-button>
+                                <div>
+                                    <div>
+                                        <span class="price-rdo">1.50 FC</span>
+                                    </div>
+                                    <div>
+                                        <span class="title-rdo">DHL Delivery (10-12 Days)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+    
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx" class="pt-5">
+        <div  class="p-3">
+            <button mat-button matPrefix class="dtal-btn" matStepperPrevious>
+                <mat-icon class="btn-icon">shopping_cart</mat-icon>
+                Cart
+            </button>
+        </div>
+        <div  class="p-3">
+            <button mat-button matSuffix class="dtal-btns" [disabled] = "!delivery_addressDetails.valid" type="submit" matStepperNext fxLayoutAlign="center center">
+                Payment 
+                <mat-icon class="btn-icon">credit_card</mat-icon>
+            </button>
+        </div>
+    </div>
+</form>
+

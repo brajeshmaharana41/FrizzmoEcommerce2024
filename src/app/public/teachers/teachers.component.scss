@@ -1,0 +1,36 @@
+.parents{
+    width: 350px;
+}
+ .submain{
+    width: 570px;
+    margin-top: 7%;
+  }
+  .row{
+    justify-content: center;
+    display: flex;
+  }
+  button{
+    background: linear-gradient(to left, rgb(109, 196, 111), rgb(34,171,114));
+    border-radius: 30px;
+    width: 150px;
+    color: white;
+    margin-top: 4%;
+    font-weight: 600;
+    font-family: 'Montserrat';
+  }
+  .title{
+    font-size: xx-large;
+    font-family: 'Montserrat';
+    font-weight: bold;
+  }
+  .subtitle{
+    font-size: large;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: rgb(44,156,120);
+  }
+  .dec{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Montserrat';
+  }

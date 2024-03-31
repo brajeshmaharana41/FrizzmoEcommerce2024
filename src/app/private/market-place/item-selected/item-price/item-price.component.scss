@@ -1,0 +1,80 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.family{
+    font-family: "Montserrat";
+}
+.title{
+    font-size: 20px;
+    font-weight: 700;
+    color: #808080;
+}
+.subtitle{
+    font-size: 12px;
+    font-weight: 500;
+    color: #B3B3B3;
+}
+.shop{
+    font-size: 12px;
+    font-weight: 500;
+    color: #999999; 
+}
+.rate{
+    font-size: 10px;
+    font-weight: 700;
+    color: #B3B3B3;   
+}
+.dec{
+    font-size: 10px;
+    font-weight: 500;
+    color: #808080;
+    padding-left: 5px;
+}
+.icon{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: #D8D8D8;
+    font-size: 20px;
+}
+.cart{
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    border-radius: 30px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    width: 120px;
+    height: 44px;
+    box-shadow: 0px 3px 5px 0px #D8D8D8;
+}
+.bottom{
+    margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 991px) and (max-width: 2000px){
+    .carts{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 190px) and (max-width: 991px){
+    .carts{
+        display: none;
+    }
+}
+
+.prive-card {
+    position: sticky;
+  }
+  
+  .price-card {
+    top: 0.5rem; 
+}
+.icons-heads{
+    color: #D8D8D8;
+  }
+  .icons-head{
+    color: #00AA75;
+  }

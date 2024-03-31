@@ -1,0 +1,79 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+.back{
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    width: 200px;
+    height: 60px;
+    color: white;
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    border-radius: 30px;
+    font-family: "Montserrat";
+    font-weight: 600;
+}
+
+.title{
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #808080;
+}
+.subtitle{
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #000000;
+}
+.btn-done{
+    background-color: #00AA75;
+    box-shadow: 0px 0px 0px 0px;
+}
+.done-img{
+    width: 330px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-done{
+    width: 100%;
+}
+@media only screen and (min-width: 405px) and (max-width: 490px){
+    .done-img{
+        width: 280px;
+        height: 300px;
+    }
+    .title{
+        font-size: 10px;
+    }
+    .subtitle{
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 404px){
+    .done-img{
+        width: 200px;
+        height: 220px;
+    }
+    .title{
+        font-size: 10px;
+    }
+    .subtitle{
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 80px) and (max-width: 319px){
+    .done-img{
+        width: 150px;
+        height: 170px;
+    }
+    .title{
+        font-size: 6px;
+    }
+    .subtitle{
+        font-size: 6px;
+    }
+}

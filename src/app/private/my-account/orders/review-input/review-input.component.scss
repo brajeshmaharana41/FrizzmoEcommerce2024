@@ -1,0 +1,124 @@
+.background{
+    background: #fafafa;
+}
+.bord{
+    border-bottom: 1px solid #B4B4B4;
+}
+.order-title{
+
+    font-size: 28px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.order-title2{
+
+    font-size: 23px;
+    font-weight: 600;
+    font-family: "Montserrat";
+}
+.order-subtitle{
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.order-items{
+
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+
+.prd-det{
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+.rev-price{
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: #B4B4B4;
+}
+.rev-icon{
+    font-size: 32px;
+    color: #CCA200;
+}
+
+.rev-sel-icon{
+    font-size: 32px;
+    color: #CCA200;
+}
+a{
+    cursor: pointer;
+}
+.rev-input{
+    width: 100%;
+}
+.rev-uplode{
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+}
+.rev-up{
+    font-size: 13px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+}
+.rev-btn{
+    background: linear-gradient(to left, #69BD65, #22AB72);
+    height: 45px;
+    border-radius: 30px;
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    color: white;
+    font-weight: 600;
+    font-family: "Montserrat";
+    font-size: 16px;
+    width: 200px;
+}
+.dele-btns{
+    background-color: #F2F2F2;
+    height: 45px;
+    border-radius: 30px;
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    color: #00AA75;
+    border: 1px solid #00AA75;    
+    font-weight: 600;
+    font-family: "Montserrat";
+    font-size: 16px;
+    width: 150px;
+}
+.file-input-wrapper {
+    width: 200px;
+    height: 100px;
+    margin: 2px;
+    overflow: hidden;
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px 1px #c9c9c9;
+    border-radius: 3px;
+    position: relative;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .file-input-wrapper>input[type="file"] {
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .uplode_data{
+    width: 200px;
+    height: 100px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .data_img{
+        width: 100%;
+    }
+  }
+  

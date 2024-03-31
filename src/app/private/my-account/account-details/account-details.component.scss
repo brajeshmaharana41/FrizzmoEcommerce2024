@@ -1,0 +1,154 @@
+.background{
+    background: #fafafa;
+}
+.list{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: "Montserrat";
+    color: rgb(193,193,193);
+}
+.listcolor{
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.item-head{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.account-list{
+    padding-top: 85px;
+}
+
+.order-title{
+
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.order-subtitle{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.book-address{
+    height: 250px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-addrs-font{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.font-color{
+    color: #B4B4B4;
+}
+.font-edit{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #00AA75;
+    cursor: pointer;
+}
+.font-cancel{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #000000;
+    cursor: pointer;
+}
+
+.book-addrs-title{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.account-icon-wid{
+    width: 100px;
+}
+.account-icon{
+    font-size: 80px;
+}
+.account-mob{
+    display: block;
+}
+.acount-uplodes{
+    display: none;
+}
+.acount-uplode{
+    display: block;
+}
+@media only screen and (min-width: 100px) and (max-width: 959px){
+    .account-mob{
+        display: none;
+    }
+    .acount-uplodes{
+        display: block;
+    }
+    .acount-uplode{
+        display: none;
+    }
+}
+.bord{
+    border-bottom: 1px solid #B4B4B4;
+}
+.detal-input{
+    background-color: #fafafa !important;
+    width: 100% !important;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.mat-datepicker-toggle{
+    font-size: 25px !important;
+}
+.details-btn{
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    border-radius: 30px;
+    width: 120px;
+    height: 50px;
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+.file-input-wrapper {
+    width: 70px;
+    overflow: hidden;
+    cursor: pointer !important;
+  }
+  
+  .file-input-wrapper>input[type="file"] {
+    font-size: 40px;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .uplode_data{
+    width: 200px;
+    height: 100px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .data_img{
+        width: 100%;
+    }
+  }
+  .rev-uplode{
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+}
+.crusser{
+    cursor: pointer;
+}

@@ -1,0 +1,24 @@
+ <mat-card class="account-card" routerLink="{{myAccount_Data.account_rout}}">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+        <div class="center p-1">
+            <mat-icon>{{myAccount_Data.icon}}</mat-icon>
+        </div>
+
+        <div class="center p-2">
+            <span class="account-title">{{myAccount_Data.title}}</span>
+        </div>
+    </div>
+    <div class="px-2">
+        <span class="account-subtitle">{{myAccount_Data.subtitle}}</span>
+    </div>
+    <div fxHide fxShow.lt-md fxLayout="row" fxLayoutAlign="center start" fxLayoutGap="gappx">
+        <div>
+            <button mat-button [ngClass]="myAccount_Data.inv_btn" routerLink="/my-account/refer">{{myAccount_Data.inv_title}}</button>
+        </div>
+    </div>
+    <div fxHide fxShow.gt-sm fxLayout="row" fxLayoutAlign="end start" fxLayoutGap="gappx">
+        <div>
+            <button mat-button [ngClass]="myAccount_Data.inv_btn" routerLink="/my-account/refer">{{myAccount_Data.inv_title}}</button>
+        </div>
+    </div>
+</mat-card>

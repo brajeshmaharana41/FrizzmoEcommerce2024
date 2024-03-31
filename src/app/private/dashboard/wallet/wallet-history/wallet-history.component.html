@@ -1,0 +1,60 @@
+<div class="pt-5 pb-3">
+    <div fxLayout="row warp" class="p-2">
+        <div fxFlex.xs="100" fxFlex.sm="30" fxFlex.md="30" fxFlex.lg="30" fxFlex.xl="30">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                <span class="title">Wallet History</span>
+            </div>
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="70" fxFlex.md="70" fxFlex.lg="70" fxFlex.xl="70">
+            <div class="weeks">
+                <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="gappx">
+                    <div fxLayout="row" class="pr-3">
+                        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" >
+                            <mat-button-toggle value="bold" (click)="ChangeDate(7)">Last 7 Days</mat-button-toggle>
+                            <mat-button-toggle value="italic" (click)="ChangeDate(30)">Last 30 Days</mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                    <div>
+                        <div class="dates" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                            <mat-datepicker-toggle matPrefix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-date-range-input [formGroup]="range" [rangePicker]="picker1">
+                                <input matStartDate formControlName="start" placeholder="Start date">
+                                <input matEndDate formControlName="end" placeholder="End date">
+                            </mat-date-range-input>
+                            <mat-date-range-picker #picker1></mat-date-range-picker>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="week p-2">
+        <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+            <div fxLayout="row" class="pr-3 pt-3">
+                <mat-button-toggle-group name="fontStyle" aria-label="Font Style" >
+                    <mat-button-toggle (click)="ChangeDate(7)">Last 7 Days</mat-button-toggle>
+                    <mat-button-toggle (click)="ChangeDate(30)">Last 30 Days</mat-button-toggle>
+                </mat-button-toggle-group>
+            </div>
+            <div class="pt-3">
+                <div class="dates" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                    <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-input [formGroup]="range" [rangePicker]="picker">
+                        <input matStartDate formControlName="start" placeholder="Start date">
+                        <input matEndDate formControlName="end" placeholder="End date">
+                    </mat-date-range-input>
+                    <mat-date-range-picker #picker></mat-date-range-picker>         
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div fxLayout="row wrap">
+<div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" *ngFor="let overViewinfo of overViewinfos">
+    <div class="p-2">
+        <app-overview-cards [walletData] = "overViewinfo"></app-overview-cards>
+    </div>
+</div>
+</div>
+

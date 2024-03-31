@@ -1,0 +1,76 @@
+<div>
+    <div class="border-bottom">
+        <div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="gappx">
+            <div class="p-2">
+                <span class="addres-title">Add a New Card</span>
+            </div>
+    
+            <div class="p-2">
+                <mat-icon mat-dialog-close>close</mat-icon>
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="cardDetails" (ngSubmit)="onClickSubmit(cardDetails.value)">
+        <div>
+            <div class="p-3">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Name on card</mat-label>
+                    <input matInput placeholder="Enter" formControlName="card_name" required>
+                    <mat-error *ngIf="myError('card_name', 'required')">Please Enter Your Name On the Card</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <div fxLayout="row wrwp">
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+                    <div class="p-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label  class="pl-1">Credit Card</mat-label>
+                            <input class="pad-input" matInput placeholder="Card Number" formControlName="card_number" maxlength="16" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" required>
+                            <mat-icon matPrefix class="car-icon p-0">credit_card</mat-icon>
+                            <mat-error *ngIf="myError('card_number', 'required')">Please Enter Your Card Number</mat-error>
+                        </mat-form-field> 
+                    </div>
+                </div>
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="16" fxFlex.lg="16" fxFlex.xl="16">
+                    <div class="p-2 pt-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>EXP Month</mat-label>
+                            <mat-select formControlName="card_month">
+                              <mat-option *ngFor="let team of months" [value]="team.month">{{team.month}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="16" fxFlex.lg="16" fxFlex.xl="16">
+                    <div class="p-3 pt-4">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>EXP Year</mat-label>
+                            <mat-select formControlName="card_year">
+                              <mat-option  *ngFor="let team of years" [value]="team.year">{{team.year}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="34" fxFlex.lg="34" fxFlex.xl="34">
+                    <div class="p-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>CVV</mat-label>
+                            <input class="pad-input" matInput [type]="hide ? 'password' : 'text'" placeholder="XXX" formControlName="card_cvv" maxlength="3" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" required >
+                            <mat-error *ngIf="myError('card_number', 'required')">Please Enter Your CVV</mat-error>
+                            <div style="cursor: pointer;" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon style="color: #EAEAEA; font-size: medium;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center end" fxLayoutGap="gappx">
+            <div class="pad-btn">
+                <button mat-button class="address-btn" mat-dialog-close [disabled] = "!cardDetails.valid" type="submit">Add Now</button>
+            </div>
+        </div>
+    </form>
+</div>
+

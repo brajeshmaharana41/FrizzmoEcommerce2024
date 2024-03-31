@@ -1,0 +1,70 @@
+<div>
+    <div class="filter-mob">
+        <div class="filter-top">
+            <span class="filter-title"> Price (FC) </span>
+        </div>
+        <div class="filter-bottom">
+            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+                <div fxLayout="row" *ngFor="let season of seasons" (click)="setStateAsActive(season)">
+                    <a class="title pt-2 pb-3" [class.active]="season === activeState">{{season}}</a>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="center center" class="pt-3">
+                    <div class="filter-input">
+                        <input matInput class="input" placeholder="Min" minlength="1" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="filter-input">
+                        <input  matInput class="input" placeholder="Max"minlength="1" maxlength="5" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');">
+                    </div>
+                    <div class="filter-input">
+                        <button class="list-btn">Go</button>
+                    </div>
+                </div>
+            </mat-radio-group>
+        </div>
+    </div>
+
+    <div class="filter-mob">
+        <div class="filter-top">
+            <span class="filter-title"> Brand </span>
+        </div>
+        <div  class="filter-bottom">
+            <mat-radio-group aria-label="Select an option">
+                <div fxLayout="row wrap">
+                    <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" *ngFor="let brand of brands">
+                        <mat-checkbox class="brand" [value]="brand">{{brand}}</mat-checkbox>
+                    </div>
+                </div>
+                <button mat-button class="more">Show More</button>  
+            </mat-radio-group>
+        </div>
+    </div>
+
+    <div class="filter-mob">
+        <div class="filter-top">
+            <span class="filter-title"> Color </span>
+        </div>
+        <div  class="filter-bottom">
+            <mat-radio-group aria-label="Select an option">
+                <div fxLayout="row wrap">
+                    <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" *ngFor="let color of colors">
+                        <mat-checkbox class="brand" [value]="color">{{color}}</mat-checkbox>
+                    </div>
+                </div>
+                <button mat-button class="more">Show More</button>
+            </mat-radio-group>
+        </div>
+    </div>
+
+    <div class="filter-tops">
+        <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="gappx">
+            <div>
+                <button mat-stroked-button class="filter-mob-btn" mat-dialog-close>Close</button>
+            </div>
+
+            <div>
+                <button mat-stroked-button class="filter-mob-btns" mat-dialog-close>Submit</button>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,90 @@
+.stu-brd{
+    border: 1px solid #F2F2F2;
+    height: 430px;
+    text-align: center;
+    background-color: #F2F2F2;
+    padding-left: 40px;
+    padding-right: 40px;
+ }
+ .google-icon{
+    width: 100%;
+ }
+ .icon-brd{
+   background: linear-gradient(
+      to top, 
+      #F2F2F2 0%, 
+      #F2F2F2 50%, 
+      #ffffff 50%, 
+      #ffffff 100%
+    );  
+ }
+ .bord{
+    border-radius: 10px;
+    width: 80px;
+   //  height: 80px;
+   //  position: fixed;
+   //  position: absolute;
+ }
+ .btn{
+    width: 100%;
+    height: 55px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat";
+ }
+ .btn-colrs{
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    color: #ffffff;
+ }
+ .btn-colr{
+    background: #F2F2F2;
+    color: #00AA75;
+    border: 1px solid #00AA75;
+ }
+ .example-margin{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    color: #000000;
+ }
+ .title{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Montserrat";
+ }
+ .subtitle{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    color: #000000;
+ 
+ }
+ .prd-ipt-cls{
+    padding-left: 30px;
+    padding-right: 30px;
+ }
+ @media only screen and (min-width: 50px) and (max-width: 500px){
+    .prd-ipt-cls{
+       padding-left: 10px;
+       padding-right: 10px;
+    }
+    .stu-brd{
+        height: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .btn{
+        height: 55px;
+        font-size: 15px;
+    }
+    .title{
+        font-size: 16px;
+    }
+    .subtitle{
+        font-size: 13px;
+    }
+    .example-margin{
+       font-size: 10px;
+    }
+ }

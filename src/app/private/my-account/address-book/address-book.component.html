@@ -1,0 +1,52 @@
+<app-main-header [i] = index></app-main-header>
+<div class="background">
+    <div class="container">
+        <app-my-accont-header fxHide fxShow.lt-sm></app-my-accont-header>
+        <div>
+            <div fxHide fxShow.gt-sm fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+                <div class="account-list">
+                    <app-side-menu></app-side-menu>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                <div>
+                    <div class="pt-5 pb-2">
+                        <div class="pb-4">
+                            <span class="order-title">Address Book</span>
+                        </div>
+                        <div>
+                            <span class="order-subtitle">Manage your addresses</span>
+                        </div>
+                    </div>
+                    <div class="bord pt-2">
+                    </div>
+                    <div class="pt-2">
+                        <div fxLayout="row wrap">
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+                                <div class="p-2">
+                                    <mat-card class="book-address center">
+                                        <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                                            <div>
+                                                <mat-icon class="book-addrs-icon" (click)="openDialog()">add</mat-icon>
+                                            </div>
+                                            <div>
+                                                <span class="book-addrs-title" (click)="openDialog()">Add a School Address</span>
+                                            </div>
+                                        </div>
+                                    </mat-card>
+                                </div>
+                            </div>
+    
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" *ngFor="let addressData of addressDatas">
+                                <div class="p-2">
+                                    <app-address-book-card [address_details] = addressData></app-address-book-card>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

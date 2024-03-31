@@ -1,0 +1,15 @@
+<div class="head">
+    <div class="view">
+        <span class="title">You may like also</span>
+    </div>
+</div>
+
+<div class="cardsrow">
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="gappx">
+        <div class="most" *ngFor="let productView of productViews">
+            <app-sle-product-card [product] = "productView"></app-sle-product-card>
+        </div>
+    </div>
+</div>
+
+

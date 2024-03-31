@@ -1,0 +1,33 @@
+<app-main-header></app-main-header>
+<div class="back-color">
+    <div class="container">
+        <div fxLayout="row" fxLayoutAlign="start center" class="pt-5">
+            <div>
+                <span class="title">Favorites</span>
+            </div>
+        </div>
+        <div class="pt-3">
+          <div class="item-desk" *ngFor="let listData of listDatas | async" >
+            <app-list-product [listProduct] = "listData"></app-list-product>
+        </div>
+        <div fxHide.gt-sm fxShow *ngFor="let moblistData of currentData  let i = index" >
+            <app-mob-list-product [listProduct] = "moblistData"></app-mob-list-product>
+        </div>
+          <div class="item-desk">
+              <mat-paginator  [length]="100"
+                              [pageIndex]="currentPage$" 
+                              [pageSize]="pageSize$"                              
+                              [pageSizeOptions]="[2, 3, 5, 10, 25]"
+                              aria-label="Select page" class="filter"
+                              >
+              </mat-paginator>
+          </div>  
+          <div class="item-mob">
+              <div fxLayoutAlign="center center">
+                  <button mat-button class="more" (click)="showMore()">Show more</button>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

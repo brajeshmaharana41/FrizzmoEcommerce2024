@@ -1,0 +1,222 @@
+.background{
+    background: #fafafa;
+}
+.list{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: "Montserrat";
+    color: rgb(193,193,193);
+}
+.listcolor{
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.order-title{
+
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.order-subtitle{
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.book-addrs-font{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    color: #191919;
+}
+a{
+    color: #191919 !important;
+}
+.font-edit{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.book-addrs-title{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.book-addrs-titles{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #191919;
+}
+.input-refer{
+    width: 100%;
+    color: #8E8E8E;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+.input-icon{
+    color: #D8D8D8;
+}
+
+.refer-img{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.refer-imgs{
+    width: 450px;
+}
+
+.custom-search {
+    position: relative;
+    width: 380px;
+    height: 50px;
+  }
+  .custom-search-input {
+    width: 100%;
+    height: 40px;
+    font-family: 'Montserrat';
+    border: 1px solid #BEBEBE;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 10px 100px 10px 20px; 
+    line-height: 1;
+    // box-shadow: 2px 2px 2px #bebebe;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: 300;
+    font-size: 10px;
+    font-family: 'Montserrat';
+  }
+  .custom-search-botton {
+    position: absolute;
+    width: 110px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 11px;
+    font-family: 'Montserrat';
+    right: 0px; 
+    border: 2px solid #00AA75;
+    color: #00AA75;
+    outline: none;
+    background-color: white;
+    border-radius: 30px;
+    z-index: 2;
+  }
+  .custom-search-botton:hover {
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
+  }
+  .refer-btn{
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    color: white;
+    border-radius: 30px;
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Montserrat";
+ }
+  h2 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #B4B4B4; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+ h2 span { 
+     background:#F2F2F2; 
+     padding:0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Montserrat"; 
+ }
+ .refer-card{
+    background: #F2F2F2;
+    width: 380px;
+    border-radius: 0px;
+ }
+.refer-font-title{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+.refer-font-subtitle{
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Montserrat";
+}
+@media only screen and (min-width: 100px) and (max-width: 959px){
+    .account-mob{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .refer-img{
+        width: 400px;
+    }
+    .refer-imgs{
+        width: 400px;
+    }
+    .refer-card{
+        width: 320px;
+     }
+     .custom-search {
+        position: relative;
+        width: 380px;
+        height: 50px;
+      }
+      .custom-search-input {    
+        width: 100%;
+        height: 40px;
+      }
+      .custom-search-botton {
+        width: 90px;
+        height: 40px;
+      }
+}
+
+@media only screen and (min-width: 411px) and (max-width: 490px){
+    .refer-img{
+        width: 380px;
+    }
+    .refer-imgs{
+        width: 380px;
+    }
+    .refer-card{
+        width: 320px;
+     }
+     .book-addrs-font{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 410px){
+    .refer-img{
+        width: 270px;
+    }
+    .refer-imgs{
+        width: 270px;
+    }
+    .refer-card{
+        width: 280px;
+     }
+     .book-addrs-font{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,41 @@
+<div>
+    <div fxLayout="row wrap">
+        <div fxFlex.xs="70" fxFlex.sm="70" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <div class="bord-center">
+                    <img class="img-size" src="{{order_details.image}}">
+                </div>
+                <div>
+                    <span class="title">School Bag Canvas with Art Kit</span>
+                </div>
+            </div>
+        </div>
+        <div class="desk-list" fxFlex.xs="30" fxFlex.sm="30" fxFlex.md="10" fxFlex.lg="10" fxFlex.xl="10" fxLayoutAlign="center center" >
+            <div>
+                <span class="price">{{order_details.price}} FC</span>            
+            </div>
+        </div>
+        <div class="mob-list" fxFlex.xs="30" fxFlex.sm="30" fxFlex.md="10" fxFlex.lg="10" fxFlex.xl="10" fxLayoutAlign="end center">
+            <div>
+                <span class="price pr-3">{{order_details.price}} FC</span>            
+            </div>
+        </div>
+        <div class="desk-list" fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="40" fxFlex.lg="40" fxFlex.xl="40" fxLayoutAlign="center center">
+            <div>
+                <span class="price">{{order_details.quantity}}</span>            
+            </div>
+        </div>
+        <div class="mob-list pt-3" fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="40" fxFlex.lg="40" fxFlex.xl="40" fxLayoutAlign="start center">
+            <div>
+                <span class="price pl-4">Quantity - {{order_details.quantity}}</span>            
+            </div>
+        </div>
+        <div class="desk-list" fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="17" fxFlex.lg="17" fxFlex.xl="17" fxLayoutAlign="start center">
+            <span class="price pl-4">{{order_details.total}} FC</span>
+        </div>
+        <div class="mob-list pt-3" fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="17" fxFlex.lg="17" fxFlex.xl="17" fxLayoutAlign="end center">
+            <span class="price pr-3">{{order_details.total}} FC</span>
+        </div>
+    </div>
+    <hr>
+</div>

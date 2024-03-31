@@ -1,0 +1,39 @@
+<app-main-header [i] = index></app-main-header>
+<div class="background">
+    <div class="container">
+        <app-my-accont-header fxHide fxShow.lt-sm></app-my-accont-header>
+        <div>
+            <div fxHide fxShow.gt-sm fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20" class="account-mob">
+                <div class="account-list">
+                    <app-side-menu></app-side-menu>
+                </div>
+            </div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="80" fxFlex.lg="80" fxFlex.xl="80">
+                <div>
+                    <div class="pt-5 pb-2">
+                        <div class="pb-4">
+                            <span class="order-title">Your Orders</span>
+                        </div>
+                        <div>
+                            <span class="order-subtitle">See what you have purchased or track deliveries.</span>
+                        </div>
+                    </div>
+                    <div class="bord pt-2">
+                    </div>
+                    <div class="pt-2">
+                        <div class="pb-3">
+                            <span class="order-items">Showing 2 of 2 orders</span>
+                        </div>
+
+                        <div fxLayout="row wrap">
+                            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33" *ngFor="let yourOrderDetail of yourOrderDetails">
+                                <app-your-order-card [yourOrder_Data] = "yourOrderDetail"></app-your-order-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+<app-main-footer></app-main-footer>

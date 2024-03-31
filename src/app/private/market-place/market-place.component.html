@@ -1,0 +1,22 @@
+<app-main-header [i] = index></app-main-header>
+  <app-itemslist-header></app-itemslist-header>
+  <div style="background: #fafafa;">
+    <div class="container">
+      <div>
+          <div fxLayout="row wrap">
+              <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="72" fxFlex.lg="72" fxFlex.xl="72" >
+                <div style="padding: 10px;">
+                  <app-itemslist-products></app-itemslist-products>
+                </div>
+              </div>
+              <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="28" fxFlex.lg="28" fxFlex.xl="28">
+                <div class="filter">
+                  <app-itemslist-filter></app-itemslist-filter>
+                </div>
+              </div>     
+          </div>
+      </div>
+    </div>
+  </div>
+<app-main-footer></app-main-footer>
+ 

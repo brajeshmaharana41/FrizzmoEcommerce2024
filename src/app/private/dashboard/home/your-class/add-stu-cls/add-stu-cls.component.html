@@ -1,0 +1,28 @@
+<div>
+    <div class="stu-brd">
+        <div class="pt-5">
+            <div class="pt-4">
+                <span class="title">Add Student</span>
+            </div>
+            <div class="pt-2 pb-1">
+                <span class="subtitle">Science Class -3 A</span>
+            </div>
+        </div>
+        <form [formGroup]="studentForm" (ngSubmit)="onClickSubmit(studentForm.value)">
+            <div class="pt-5">
+                <div class="file-input-wrapper" fxLayout="column" fxLayoutAlign="center center">
+                    <input type="file" class="rev-uplode" multiple="multiple" accept="image/*, video/*">
+                </div>
+            </div>
+            <div class="pt-4">
+                <div>
+                    <button mat-button class="btn btn-colrs" [disabled]="!studentForm.valid"
+                        type="submit">Upload</button>
+                </div>
+                <div class="pt-3">
+                    <button mat-button class="btn btn-colr" mat-dialog-close>CLOSE</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

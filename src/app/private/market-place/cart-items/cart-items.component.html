@@ -1,0 +1,44 @@
+<app-main-header [i] = index></app-main-header>
+<div style="background: #fafafa;">
+    <app-cart-header></app-cart-header>
+    <div class="container">    
+        <mat-stepper
+            style="background-color: #fafafa;"
+            class="example-stepper" #stepper [linear]="false">
+
+            
+            <mat-step [stepControl]="firstFormGroup" label="Shopping Cart" state="cart">
+              <app-adding-items></app-adding-items>
+            </mat-step>
+            <mat-step [stepControl]="secondFormGroup" label="Delivery Methods" state="delivery" errorMessage="Address is required">
+                <app-delivery-address></app-delivery-address>
+            </mat-step>
+            <mat-step [stepControl]="thirdFormGroup" label="Payment Methods"  state="card">
+                <app-payment-meth></app-payment-meth>
+            </mat-step>
+            <mat-step label="Confirm delivery" state="done">
+              <app-confirm-delivery> </app-confirm-delivery>
+            </mat-step>
+
+
+
+
+            <ng-template matStepperIcon="cart">
+              <mat-icon class="clo-icon">add_shopping_cart</mat-icon>
+            </ng-template>
+            <ng-template matStepperIcon="delivery">
+                <mat-icon class="clo-icon">local_shipping</mat-icon>
+            </ng-template>
+            <ng-template matStepperIcon="card">
+                <mat-icon class="clo-icon">credit_card</mat-icon>
+            </ng-template>
+            <ng-template matStepperIcon="done">
+                <mat-icon class="clo-icon">done</mat-icon>
+            </ng-template>
+
+
+        </mat-stepper>
+    </div>
+</div>
+
+<app-main-footer></app-main-footer>

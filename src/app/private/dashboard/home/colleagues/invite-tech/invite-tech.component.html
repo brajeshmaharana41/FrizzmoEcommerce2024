@@ -1,0 +1,84 @@
+        <div fxLayout="row" fxLayoutAlign="flex-end flex-start">
+            <div>
+                <mat-icon class="dilog-icon" mat-dialog-close>clear</mat-icon>
+            </div>
+        </div>
+        
+        <div>
+            <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+                <div class="pt-2">
+                    <div fxLayout="row wrap">
+                        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="p-4">
+                            <div fxLayout="column" fxLayoutAlign="center cenetr" fxLayoutGap="gappx">
+                                <div class="pb-3">
+                                    <span class="refer-font-title">20% off for you and 20% off for your colleagues</span>
+                                </div>
+                                <div class="pb-5">
+                                    <span class="refer-font-subtitle">Treat your colleagues and we'll treat you! When your 
+                                        colleague signed up using your unique link they will receive 
+                                        20% off their first order.  Even better? As a thank you, we 
+                                        will give you 20% off your next order too!</span>
+                                </div>
+                                <div class="pt-4 center">
+                                    <div class="refer-img pt-4 pl-2 pr-2">
+                                        <img class="refer-imgs" src="../../../../assets/product-details/Group 791.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="p-3">
+                            <div fxLayout="row" fxLayoutAlign="center cenetr" fxLayoutGap="gappx">
+                                <mat-card class="refer-card">
+                                    <div>
+                                        <div class="pb-3 pt-3">
+                                            <span class="book-addrs-title">Invite Share Link</span>
+                                        </div>
+
+                                        <div class="center pb-3">
+                                            <div class="custom-search" for="clipboard-example-text">
+                                                <input type="text" class="custom-search-input" id="clipboard-example-textarea" [(ngModel)]="urlvalue" disabled>
+                                                <button class="custom-search-botton" [cdkCopyToClipboard]="urlvalue" type="submit" (click)="onCopy()">Copy Link</button>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h2><span>or</span></h2>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="pb-3">
+                                            <span class="book-addrs-title">Email Share Link</span>
+                                        </div>
+                                        <form [formGroup]="invitetechForm" (ngSubmit)="onClickSubmit(invitetechForm.value)">
+                                            <div>
+                                                <div class="pb-2">
+                                                    <mat-form-field class="input-refer">
+                                                        <input matInput placeholder=" Enter Teacher name" formControlName="techname" class="mb-1">
+                                                        <mat-icon matPrefix class="input-icon mr-2">person</mat-icon>
+                                                        <mat-error *ngIf="myError('techname', 'required')">You Must Enter name</mat-error>
+                                                    </mat-form-field>
+                                                </div>
+                                                <div class="pb-1">
+                                                    <mat-form-field class="input-refer">
+                                                        <input matInput placeholder="Enter Teacher email" type="email" formControlName="techemail" class="mb-1">
+                                                        <mat-icon matPrefix class="input-icon mr-2">email</mat-icon>
+                                                        <mat-error *ngIf="myError('techemail', 'required')">You Must Email Address</mat-error>
+                                                        <mat-error *ngIf="myError('techemail', 'pattern')">Invalid Email Address</mat-error>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="center pb-4">
+                                                <button mat-button class="refer-btn" [disabled] = "!invitetechForm.valid" type="submit" routerLink="/invite-success"  mat-dialog-close>INVITE</button>
+                                            </div>
+                                        </form>
+                                        <div class="center pl-2 pr-2">
+                                            <span class="book-addrs-font">By participating in the promotion, you accept <br> the Platform <a class="book-addrs-font" href="">Terms & Conditions</a> and <br>the <a class="book-addrs-font" href="">Promotion Terms & Conditions</a></span>                                        
+                                        </div>
+                                    </div>
+                                </mat-card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>

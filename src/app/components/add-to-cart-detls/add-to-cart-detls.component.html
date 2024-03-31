@@ -1,0 +1,47 @@
+<div>
+    <div fxLayout="row wrap">
+        <div fxFlex.xs="70" fxFlex.sm="70" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33" >
+            <div fxLayoutAlign="start center">
+                <div class="bod-img pl-3">
+                    <img class="img-itms" src="{{cart_details.item}}">
+                </div>
+                <div class="prdleft">
+                    <span class="title">{{cart_details.name}}</span>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.xs="30" fxFlex.sm="30" fxFlex.md="9" fxFlex.lg="9" fxFlex.xl="9" >
+            <div fxLayoutAlign="center center" class="bod-img">
+                <span class="price">{{cart_details.price}} FC</span>            
+            </div>
+        </div>
+        <div fxFlex.xs="50" fxFlex.sm="50" fxFlex.md="41" fxFlex.lg="41" fxFlex.xl="41">
+            <div fxLayoutAlign="center center" >
+                <div class="quantity mb-15">
+                    <div fxLayout="row" fxLayout.xs="column"  class="text-muted mt-20">
+                       <div class="quantity-box" fxLayout="row" fxLayoutAlign="center start">
+                          <button mat-icon-button matTooltip="Remove" (click)="decrement()" class="quan">
+                             <mat-icon>remove</mat-icon>
+                          </button>
+                          <input type="text" name="quantity" value="{{counter}}" disabled class="form-control input-number">
+                          <button mat-icon-button matTooltip="Add" (click)="increment()" class="quan">
+                             <mat-icon>add</mat-icon>
+                          </button>
+                       </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div fxFlex.xs="25" fxFlex.sm="25" fxFlex.md="12" fxFlex.lg="12" fxFlex.xl="12" >
+            <div fxLayoutAlign="center center" class="bod-img">
+                <span class="price">{{cart_details.total}} FC</span>
+            </div>
+        </div>
+        <div fxFlex.xs="25" fxFlex.sm="25" fxFlex.md="5" fxFlex.lg="5" fxFlex.xl="5">
+            <div fxLayoutAlign="center center" class="bod-img">
+                <button mat-button mat-icon-button><mat-icon style="color: #D8D8D8; font-weight: 300; font-size: 20px;">clear</mat-icon></button>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>

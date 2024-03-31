@@ -1,0 +1,34 @@
+
+<div class="pt-4 pb-4">
+    <div fxLayout="row warp" class="p-2">
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="100" fxFlex.lg="100" fxFlex.xl="100">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                <span class="title">Your invited teacher(s)</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <div fxLayout="row wrap">
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" >
+            <div class="p-2">
+                <app-invite-btn></app-invite-btn>
+            </div>     
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" *ngFor="let techpending of techpendings">
+            <div class="p-2">
+                <app-invitedtls-cards  [invitepending] = "techpending"></app-invitedtls-cards>
+            </div>
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25" *ngFor="let techconform of techconforms">
+            <div class="p-2">
+                <app-invite-conform [inviteconform] = "techconform"></app-invite-conform>
+            </div>
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="25" fxFlex.lg="25" fxFlex.xl="25">
+            <div class="p-2">
+                <app-showmore-btn></app-showmore-btn>
+            </div>
+        </div>
+    </div>
+</div>

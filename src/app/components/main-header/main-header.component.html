@@ -1,0 +1,117 @@
+ <div class="desk-head">
+    <mat-toolbar fxLayout="row" class="tool-bar">
+        <div fxFlex.xs="33" fxFlex.sm="33" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                <mat-form-field appearance="outline" class="search-main pt-3">
+                    <input matInput placeholder="Search"  [formControl]="myControl"
+                    [matAutocomplete]="auto" class="input-font ml-2">
+                    <button mat-icon-button aria-label="" matPrefix class="ml-2">
+                        <mat-icon class="input-icon">search</mat-icon>
+                    </button>
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" class="sch-list" routerLink='/my-account/search-result'>
+                          {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </div>
+        </div>
+    
+        <div fxFlex.xs="33" fxFlex.sm="33" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                <div>
+                    <img routerLink="/dashboard" class="logo-img" src="../../../assets/product-details/Group -1.svg">
+                </div>
+            </div>
+        </div>
+    
+        <div fxFlex.xs="34" fxFlex.sm="34" fxFlex.md="34" fxFlex.lg="34" fxFlex.xl="34">
+            <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="gappx">
+                <button mat-icon-button aria-label="" (click)="toggleSelected()" routerLink="/favorites" routerLinkActive="active">
+                    <mat-icon class="icons-head"  routerLink="/favorites" routerLinkActive="active">favorite</mat-icon>
+                </button>
+                <a class="head-text pr-2" routerLink="/favorites" routerLinkActive="active">Favorites</a>
+    
+                <button mat-icon-button aria-label="" routerLink="/market-place/item-selected/cart-items" routerLinkActive="active">
+                    <mat-icon class="icons-head" routerLink="/market-place/item-selected/cart-items" routerLinkActive="active">shopping_cart</mat-icon>
+                </button>
+                <a class="head-text pr-3" routerLink="/market-place/item-selected/cart-items" routerLinkActive="active">Cart</a>
+    
+                <div class="my-account">
+                    <button mat-icon-button [matMenuTriggerFor]="menu">
+                        <img src="../../../assets/Avatar.png">
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <div fxLayout="column" class="prof_info">
+                            <div>
+                                <img class="img_profile" src="../../../assets/Avatar.png">
+                            </div>
+                            <div class="pt-3">
+                                <span class="profile_title">Jory Lenz</span>
+                            </div>
+                            <div>
+                                <span class="email_text">jorylenz@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <button mat-menu-item class="list_btn" routerLink="/my-account">
+                                <mat-icon class="btn-icon" matPrefix>perm_contact_calendar</mat-icon>
+                                My Account
+                            </button>
+                            <button mat-menu-item class="list_btn" routerLink="/">
+                                <mat-icon matPrefix>power_settings_new</mat-icon>
+                                Logout
+                            </button>
+                        </div>
+                      </mat-menu>
+                </div>
+            </div>
+        </div>
+    </mat-toolbar>
+ </div>
+
+<div class="mob-head">
+    <mat-toolbar class="tool-bars">
+        <div fxFlex.xs="33" fxFlex.sm="33" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="gappx">
+                <button mat-icon-button>
+                    <mat-icon  class="icons-head" (click)="onMenu()">menu</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div fxFlex.xs="33" fxFlex.sm="33" fxFlex.md="33" fxFlex.lg="33" fxFlex.xl="33">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                <div>
+                    <img routerLink="/dashboard" class="mob-logo-img" src="../../../assets/product-details/Group 17358.svg">
+                </div>        
+            </div>
+        </div>
+        <div fxFlex.xs="34" fxFlex.sm="34" fxFlex.md="34" fxFlex.lg="34" fxFlex.xl="34">
+            <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="gappx">
+                <mat-icon  class="icons-head" routerLink="/market-place/item-selected/cart-items" routerLinkActive="active">shopping_cart</mat-icon>
+            </div>
+        </div>
+    </mat-toolbar>
+    <mat-toolbar class="mob-search tool-bar mt-3">
+        <mat-form-field appearance="outline" class="search-mob">
+                <input matInput placeholder="Search" [formControl]="myControl"
+                [matAutocomplete]="auto" class="input-font ml-2">
+            <button mat-icon-button aria-label="" matPrefix class="ml-2">
+                <mat-icon class="input-icon">search</mat-icon>
+            </button>
+        </mat-form-field>  
+    </mat-toolbar>
+</div>
+<div>
+    <mat-toolbar class="sub-title">
+        <div class="sub-head">
+            <a [ngClass]="{'active': i == 1}" class="tabs" routerLink="/dashboard">Dashboard</a>
+        </div>
+        <div class="sub-head">
+            <a class="tabs" [ngClass]="{'active': i == 2}" routerLink="/market-place">Marketplace</a>
+        </div>
+        <div class="sub-head">
+            <a class="tabs" [ngClass]="{'active': i == 3}" routerLink="/my-account">My Account</a>
+        </div>
+    </mat-toolbar>
+</div>

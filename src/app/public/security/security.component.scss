@@ -1,0 +1,70 @@
+
+  .card{
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+ .purchase{
+     color: white;
+     text-align: center;
+     font-family: 'Montserrat';
+     font-size: 14px;
+ }
+ .icon{
+    width: 80px;
+    padding-block-end: 15%;
+ } 
+ .header{
+    margin-top: 6%;
+   }
+   .foot{
+    margin-top: 1%;
+   }
+   .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-search {
+  position: relative;
+  width: 380px;
+  height: 50px;
+}
+.custom-search-input {
+  width: 100%;
+  height: 52px;
+  font-family: 'Montserrat';
+  border: 1px solid rgb(218, 214, 214);
+  border-radius: 100px;
+  padding: 10px 100px 10px 20px; 
+  line-height: 1;
+  box-shadow: 2px 2px 2px #b3b0b0;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 12px;
+}
+.custom-search-botton {
+  position: absolute;
+  width: 40%;
+  font-weight: 700;
+  font-size: small;
+  font-family: 'Montserrat';
+  right: 5px; 
+  top: 5px;
+  bottom: 2px;
+  border: 0;
+  background: linear-gradient(to left, rgb(109, 196, 111), rgb(34,171,114));
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 100px;
+  z-index: 2;
+}
+.custom-search-botton:hover {
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2);
+}

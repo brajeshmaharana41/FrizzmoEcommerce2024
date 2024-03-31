@@ -1,0 +1,47 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bck{
+    background-color: #fafafa;
+}
+.title{
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 700;
+    color: #2C2B2F;
+    text-align: center;
+}
+.sub-title{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 500;
+    color: #7D7D7D;
+    text-align: center;
+}
+.bord-btn{
+    width: 250px;
+}
+@media only screen and (min-width: 517px) and (max-width: 959px){
+    .title{
+        font-size: 17px;
+    }
+    .sub-title{
+        font-size: 16px;
+    }
+    .bord-btn{
+        width: 200px;
+    }
+}
+@media only screen and (min-width: 100px) and (max-width: 516px){
+    .title{
+        font-size: 16px;
+    }
+    .sub-title{
+        font-size: 14px;
+    }
+    .bord-btn{
+        width: 200px;
+    }
+}

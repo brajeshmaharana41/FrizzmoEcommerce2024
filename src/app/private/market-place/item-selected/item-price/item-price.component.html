@@ -1,0 +1,57 @@
+
+<div class="prive-card price-card">
+    <div fxLayout="row" fxLayoutAlign="center center" style="margin-top: 20px;">
+        <mat-card style="width: 250px; height: 300px; border-radius: 0px;" class="center" class="carts">
+            <div class="pl-5">
+                <div class="pt-3 pb-3">
+                    <span class="family title">15 FC</span>
+                </div>
+                <div fxLayout="row" class="bottom">
+                    <div class="center">
+                        <span class="family subtitle">Color:</span>
+                    </div>
+                    <div class="center" style="padding-left: 20px;">
+                        <div style="border: 1px solid #DE4D8A; width: 10px; height: 10px; border-radius: 30px; background-color: #DE4D8A;">
+                        </div>
+                    </div>
+                </div>
+                <div fxLayout="row" class="bottom">
+                    <div class="center">
+                        <span class="family shop">Shop</span>
+                    </div>
+                    <div class="pl-5">
+                        <div style="border: 2px solid #F0F0F0; border-radius: 30px; width: 60px;">
+                            <div fxLayout="row">
+                                <div><mat-icon class="rate center">star</mat-icon></div>
+                                <div class="center"><span class="family rate">4.5</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div fxLayout="row" class="bottom">
+                    <div class="center">
+                        <mat-icon class="icon">local_shipping</mat-icon>
+                    </div>
+                    <div class="center pt-1 pl-1">
+                        <span class="family dec">Delivery of  1 FC, tomorrow</span>
+                    </div>
+                </div>
+                <div class="pb-3">
+                    <button mat-button class="family cart" routerLink="/market-place/item-selected/cart-items"> 
+                        Add To Cart
+                    </button>
+                </div>
+                <div fxLayout="row" class="bottom">
+                    <div class="center">
+                        <button mat-icon-button aria-label="" (click)="toggleSelected()">
+                            <mat-icon *ngIf="selected" class="icons-head" routerLinkActive="active">favorite</mat-icon>   <mat-icon *ngIf="!selected" aria-label="" class="icons-heads">favorite_border</mat-icon>
+                        </button>
+                    </div>
+                    <div class="center">
+                        <span class="family dec">Favorite</span>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>

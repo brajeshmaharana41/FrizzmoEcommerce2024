@@ -1,0 +1,128 @@
+.background {
+    background: linear-gradient(to left, #69bd65, #22ab72);   
+    justify-content: center;
+    height: 100vh; 
+    .logo {
+        justify-content: center;
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        img {
+            max-width: 200px;
+        }
+    }
+    .signup {
+        display: flex;
+        justify-content: center;
+        mat-card {
+            width: 370px;
+            height: 590px;
+            margin-bottom:30px ;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+        }
+    }
+}
+mat-card-title{
+    font-size: 12px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    margin-top: 15%;
+    margin-left: 7%;
+}
+mat-card-subtitle{
+    font-size: 10px;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    margin-top: 5%;
+    margin-left: 7%;
+}
+.top{
+    margin: 7%;
+}
+.left{
+    padding-top: 25px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_infos{
+    padding-top: 20px;
+}
+.but{
+    background: linear-gradient(to left, #69bd65, #22ab72);    
+    border-radius: 30px;
+    width: 60%;
+    height: 50px;
+    color: white;
+    margin-top: 11px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+  }
+  .example-full-width {
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin-left: 7%;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Montserrat';
+  }
+  .card{
+    max-width: 85%;
+    margin-left: 7%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+    padding-left: 15px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px;
+    border: 0px solid #f0f0f0;
+    box-shadow: 0px 2px 5px 1px #f0f0f0;
+  }
+  .inst{
+      font-size: 9px;
+      font-family: 'Montserrat';
+      font-weight: 600;
+      padding-left: 10px;
+  }
+  @media only screen and (min-width: 190px) and (max-width: 490px){
+    .inst{
+        font-size: 8px;
+    } 
+  }
+  .check{
+      font-size: small;
+      font-weight: 900;
+      color: #CDE2D9;
+      padding-top: 3px;
+      padding-left: 10px;
+  }
+  .right{
+    padding-top: 31px;
+}
+
+.auth_btn {
+    background: linear-gradient(to left, #69bd65, #22ab72);
+    border-radius: 30px;
+    width: 100%;
+    height: 50px;
+    box-shadow: 1px 3px 5px 0px #b3b3b3;
+    color: white;
+    font-weight: 700;
+    font-family: "Montserrat";
+}
+.butt{
+    background-color: white;
+    border-radius: 30px;
+    width: 100%;
+    height: 50px;
+    color: #00AA75;
+    font-weight: 600;
+    font-family: 'Montserrat';
+  }

@@ -1,0 +1,133 @@
+<div>
+    <div fxHide fxShow.gt-sm fxLayout="row" fxLayoutAlign="start center" class="brdclass pt-2">
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="7" fxFlex.lg="7" fxFlex.xl="7">
+            <div class="p-1" fxLayoutAlign="center end">
+                <div class="bord">
+                    <div>
+                        <img class="img-rwd" src="{{studentClass.image}}">
+                    </div>
+                    <div fxLayoutAlign="center end" class="prd">
+                        <div class="brd-icon">
+                            <img class="stu-icon-logo" src="../../../../../../assets/std_profile_icon.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="23" fxFlex.lg="23" fxFlex.xl="23">
+            <div fxLayout="column" fxLayoutAlign="start start" class="pl-3">
+                <div>
+                    <span class="title">{{studentClass.name}}</span>
+                </div>
+                <div>
+                    <span class="subtitle">{{studentClass.classname}}</span>
+                </div>
+            </div>
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20" >
+            <div fxLayoutAlign="center center">
+                <span class="pricefont">{{studentClass.price}}</span>
+            </div>
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+            <div fxLayoutAlign="center center">
+                <span [ngClass]="studentClass.giftcolor">{{studentClass.gift}}</span>
+            </div>
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="20" fxFlex.lg="20" fxFlex.xl="20">
+            <div fxLayoutAlign="center center">
+                <span [ngClass]="studentClass.statuscolor">{{studentClass.giftstatus}}</span>
+                
+            </div>
+        </div>
+        <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="10" fxFlex.lg="10" fxFlex.xl="10">
+            <div fxLayoutAlign="center center">
+                <button mat-icon-button (click)="rewardclsDialog()">
+                    <mat-icon [ngClass]="studentClass.gifticoncolor">{{studentClass.gifticon}}</mat-icon>
+                </button>
+                <a class="stuinvit"(click)="invteDialog()" >{{studentClass.invite}}</a>
+            </div>
+        </div>  
+    </div>
+
+
+    <div fxHide.gt-sm fxShow class="pt-3">
+        <div fxLayout="row" class="p-1">
+            <div fxFlex.xs="20" fxFlex.sm="20">
+                <div fxLayoutAlign="start end">
+                    <div class="bord">
+                        <div>
+                            <img class="img-rwd" src="{{studentClass.image}}">
+                        </div>
+                        <div fxLayoutAlign="center end" class="prd">
+                            <div class="brd-icon">
+                                <img class="stu-icon-logo" src="../../../../../../assets/std_profile_icon.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex.xs="40" fxFlex.sm="40">
+                <div fxLayout="column" fxLayoutAlign="start start" class="pl-3">
+                    <div>
+                        <span class="title">{{studentClass.name}}</span>
+                    </div>
+                    <div>
+                        <span class="subtitle">{{studentClass.classname}}</span>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex.xs="40" fxFlex.sm="40">
+                <div fxLayoutAlign="end center">
+                    <button mat-icon-button (click)="rewardclsDialog()">
+                        <mat-icon [ngClass]="studentClass.gifticoncolor">{{studentClass.gifticon}}</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="row" class="p-1">
+            <div fxFlex.xs="50" fxFlex.sm="50">
+                <div fxLayoutAlign="start end">
+                    <div>
+                        <span class="mob-dec">Contribution</span>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex.xs="50" fxFlex.sm="50">
+                <div fxLayoutAlign="end center">
+                    <span class="mob-dec-list">{{studentClass.price}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="row" class="p-1">
+            <div fxFlex.xs="50" fxFlex.sm="50">
+                <div fxLayoutAlign="start end">
+                    <div>
+                        <span class="mob-dec">Number of Item Gifted</span>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex.xs="50" fxFlex.sm="50">
+                <div fxLayoutAlign="end center">
+                    <span [ngClass]="studentClass.giftcolor">{{studentClass.gift}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="row" class="p-1">
+            <div fxFlex.xs="50" fxFlex.sm="50">
+                <div fxLayoutAlign="start end">
+                    <div>
+                        <span class="mob-dec">Delivery Status</span>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex.xs="50" fxFlex.sm="50">
+                <div fxLayoutAlign="end center">
+                    <span [ngClass]="studentClass.statuscolor">{{studentClass.giftstatus}}</span>
+                </div>
+            </div>
+        </div>
+</div>

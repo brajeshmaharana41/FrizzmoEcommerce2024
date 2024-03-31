@@ -1,0 +1,23 @@
+<app-main-header [i] = index></app-main-header>
+    <div class="bck">
+        <div class="container">
+            <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="gappx">
+                <div class="pt-5">
+                    <img style="width: 100%;" src="../../../../../assets/Group 34030.png" alt="">
+                </div>
+                <div class="pt-5">
+                    <span class="title">Invitation Sent Successfully</span>
+                </div>
+                <div class="pt-5" fxLayoutAlign="center center">
+                    <span class="sub-title">We have sent invitation successfully to the William Christie.</span>
+                </div>
+                <div class="pt-5 bord-btn">
+                    <div *ngFor="let btn_info of btn_infos" >
+                        <app-buttons-btn  [btn_Data] = "btn_info" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" ></app-buttons-btn>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<app-main-footer></app-main-footer>

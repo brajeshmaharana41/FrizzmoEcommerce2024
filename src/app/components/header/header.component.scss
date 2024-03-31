@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  img{
+    max-width: 14%;
+  }
+  button{
+    background: linear-gradient(to left, rgb(109, 196, 111), rgb(34,171,114));
+    border-radius: 30px;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: bold;
+  }
+  mat-toolbar{
+    background-color: white;
+    box-shadow: 1px 1px 3px -3px rgb(129, 128, 128);
+  }
